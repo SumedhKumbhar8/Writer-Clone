@@ -1,0 +1,58 @@
+import Image from "next/image";
+import Link from "next/link";
+import { hcPageData } from "@/data/healthcare";
+
+export function HcHeroSection() {
+  const { hero } = hcPageData;
+
+  return (
+    <section className="bg-[#EDF5F7] pt-[129px] max-lg:pt-[120px] max-lg:pb-[50px] max-lg:pb-0" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+        <div className="flex flex-col items-start gap-[5px] lg:flex-row">
+          <div className="finServ_hero_content flex max-w-[460px] flex-col items-start">
+            <div className="-mt-[15px] mb-[15px] flex items-center gap-3">
+              <Image
+                src={hero.icon}
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <h5 className="m-0 text-[14px] font-semibold uppercase tracking-[4.2px] text-black">
+                {hero.eyebrow}
+              </h5>
+            </div>
+
+            <h1 className="m-0 mb-[15px] text-[clamp(36px,4.5vw,49px)] font-normal leading-[100%] text-black">
+              {hero.title}
+            </h1>
+
+            <p className="m-0 max-w-[460px] text-[clamp(16px,1.8vw,20px)] leading-[158.333%] text-[#333]">
+              {hero.description}
+            </p>
+
+            <div className="sf_btns_group mt-[33px] flex gap-3">
+              <Link
+                href={hero.cta.href}
+                className="sf_btn_component dark inline-flex items-center justify-center rounded-[82px] bg-black px-[26px] py-[17px] text-[18px] font-semibold text-white no-underline transition-colors hover:bg-[#262626]"
+              >
+                {hero.cta.label}
+              </Link>
+            </div>
+          </div>
+
+          <div className="finServ_hero_img ml-auto max-w-[552px] pt-8 lg:pt-0">
+            <Image
+              src={hero.heroImage}
+              alt=""
+              width={1094}
+              height={836}
+              className="h-auto w-full object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,45 @@
+.text-display {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-heading-lg {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: var(--leading-heading-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-heading {
+  font-size: clamp(1.25rem, 2vw, 1.5625rem);
+  line-height: var(--leading-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-subheading {
+  font-size: var(--text-subheading);
+  line-height: var(--leading-subheading);
+  font-weight: var(--font-weight-medium);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  letter-spacing: var(--tracking-caption);
+  font-weight: var(--font-weight-medium);
+}
+
+.font-display {
+  font-family: var(--font-caneladeck);
+}
+
+.font-body {
+  font-family: var(--font-poppins);
+}
