@@ -75,7 +75,7 @@ export const MODELS_SECTION = {
     {
       icon: "https://writer.com/wp-content/uploads/2024/11/palmyra-x.svg",
       name: "Palmyra X4",
-      tagline: "Our general purpose model with adaptive reasoning and tool-calling.",
+      tagline: "Our general purpose model with adaptive reasoning and with tool-calling.",
       details: ["Text input & output", "128k context length"],
       price: ["Input: $5.00", "Output: $12.00"],
       href: "/llms/palmyra-x4/",

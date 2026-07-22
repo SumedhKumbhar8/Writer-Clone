@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { TrustedLogos } from "@/components/home/TrustedLogos";
 import { BrandHero } from "@/components/product/brand/BrandHero";
-import { BrandTrustedLogos } from "@/components/product/brand/BrandTrustedLogos";
 import { BrandHowItWorks } from "@/components/product/brand/BrandHowItWorks";
 import { BrandWhyWriter } from "@/components/product/brand/BrandWhyWriter";
 import { BrandTestimonial } from "@/components/product/brand/BrandTestimonial";
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 
 export default function BrandPage() {
   return (
-    <>
+    <div className="brand-page bg-[#111113]">
       <BrandHero />
-      <BrandTrustedLogos />
+      <TrustedLogos variant="dark" />
       <BrandHowItWorks />
       <BrandWhyWriter />
       <BrandTestimonial />
       <BrandBottomCTA />
-    </>
+    </div>
   );
 }

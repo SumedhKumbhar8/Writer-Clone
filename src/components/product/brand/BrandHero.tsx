@@ -1,48 +1,54 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useMounted } from "@/hooks/useMounted";
 import { BRAND_HERO } from "@/data/brand";
 
 export function BrandHero() {
-  const { icon, label, title, description, cta, image } = BRAND_HERO;
+  const mounted = useMounted();
+  const { icon, label, title, description, image } = BRAND_HERO;
 
   return (
-    <section className="bg-white pt-[120px] lg:pt-[140px]">
-      <div className="mx-auto max-w-[1080px] px-5 text-center lg:px-[15px]">
-        <Image
-          src={icon}
-          alt=""
-          width={32}
-          height={32}
-          className="mx-auto mb-4"
-          aria-hidden
-        />
+    <section className="activate_product_hero">
+      <div className="container-default-sm">
+        <div className="ap_hero__content">
+          <figure className="wp-block-image size-full arrow-icon">
+            <Image src={icon} alt="" width={20} height={20} aria-hidden />
+          </figure>
 
-        <h5 className="mb-4 text-[16px] font-medium uppercase tracking-[1.6px] text-midnight-graphite">
-          {label}
-        </h5>
+          <h5 className="wp-block-heading">{label}</h5>
 
-        <h1 className="mx-auto max-w-[760px] text-[clamp(36px,5vw,64px)] font-medium leading-none tracking-[-1.28px] text-midnight-graphite">
-          {title}
-        </h1>
+          <h1 className="wp-block-heading">{title}</h1>
 
-        <p className="mx-auto mt-5 max-w-[700px] text-[16px] leading-[1.6] text-[#4f4f4f]">
-          {description}
-        </p>
+          <p className="wp-block-paragraph">{description}</p>
 
-        <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link
-            href={cta.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-[60px] items-center justify-center rounded-full bg-midnight-graphite px-6 text-[16px] font-semibold leading-5 text-canvas-white transition-colors hover:bg-[#333]"
-          >
-            {cta.label}
-          </Link>
+          <div className="demo-form-wrapper">
+            {mounted ? (
+              <form
+                className="demo-form"
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <input
+                  type="email"
+                  name="work-email"
+                  placeholder="Work email"
+                  className="demo-input"
+                  aria-label="Work email"
+                  autoComplete="email"
+                />
+                <button type="submit" className="demo-btn">
+                  Request a demo
+                </button>
+              </form>
+            ) : (
+              <div className="h-[54px] w-full rounded-full bg-[#333333]" aria-hidden />
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-12 max-w-[1080px] px-5 pb-[30px] lg:px-[15px]">
-        <figure className="overflow-hidden rounded-xl">
+      <div className="container-default-sm ap_hero__img">
+        <figure className="wp-block-image size-full">
           <Image
             src={image.src}
             alt={image.alt}

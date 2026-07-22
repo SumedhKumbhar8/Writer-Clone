@@ -17,14 +17,10 @@ export function BenchmarksSection() {
               aria-hidden
             />
           </div>
-          <p className="m-0 text-[13px] font-semibold uppercase tracking-[1.6px] text-midnight-graphite">
-            Benchmarks
-          </p>
+          <p className="llms-section-label">Benchmarks</p>
         </div>
 
-        <p className="m-0 text-[clamp(20px,2vw,24px)] font-medium leading-snug text-midnight-graphite">
-          See how our models stack up!
-        </p>
+        <p className="llms-benchmarks-subtitle">See how our models stack up!</p>
 
         <div className="mx-auto mt-4 px-0" style={{ maxWidth: 930 }}>
           <div className="palmyra-trophy-row mt-4">

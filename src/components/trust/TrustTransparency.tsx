@@ -4,7 +4,7 @@ import { Reveal } from "@/components/shared/Reveal";
 const FEATURES = [
   {
     title: "Transparency",
-    text: "We don\u2019t use the data you share with us to create, modify, or train our models. You can configure organization-wide data controls, including an automated data deletion schedule.",
+    text: "We don’t use the data you share with us to create, modify, or train our models. You can configure organization-wide data controls, including an automated data deletion schedule.",
   },
   {
     title: "Access controls",
@@ -22,11 +22,21 @@ const FEATURES = [
 
 export function TrustTransparency() {
   return (
-    <section id="transparency-control" className="benefits-block-container section-pt-sm py-[52px]">
+    <section id="transparency-control" className="benefits-block-container section-pt-sm">
       <div className="mx-auto max-w-[1080px] px-5 lg:px-[15px]">
-        <div className="benefits-block-row flex flex-col lg:flex-row gap-10 lg:gap-16">
-          <Reveal className="w-full lg:w-5/12 flex-shrink-0">
-            <div className="benefits-block-icon mb-6">
+        <div className="benefits-block-row flex gap-6 lg:gap-9">
+          <Reveal className="benefits-block-icon hidden lg:block flex-shrink-0 w-[120px]">
+            <Image
+              src="https://writer.com/wp-content/uploads/2024/06/Frame-3651-1.svg"
+              alt="Transparency & control"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </Reveal>
+
+          <Reveal className="benefits-block-content flex-1 min-w-0">
+            <div className="benefits-block-icon mb-4 lg:hidden">
               <Image
                 src="https://writer.com/wp-content/uploads/2024/06/Frame-3651-1.svg"
                 alt="Transparency & control"
@@ -35,20 +45,21 @@ export function TrustTransparency() {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-[clamp(32px,4vw,44px)] font-medium leading-[1.2] tracking-[-0.88px] text-midnight-graphite mb-4">
-              Understand what\u2019s happening across your deployment
-            </h2>
-            <p className="text-lg leading-relaxed text-midnight-graphite/70">
-              We believe you should have full insight into and control over product usage, data storage, and agent activity to meet your specific security requirements.
+            <p className="head">Transparency &amp; control</p>
+            <h2>Understand what’s happening across your deployment</h2>
+            <p className="benefits-block-desc benefits-block-desc--wide">
+              We believe you should have full insight into and control over product
+              usage, data storage, and agent activity to meet your specific security
+              requirements.
             </p>
-          </Reveal>
 
-          <Reveal className="w-full lg:w-7/12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="row grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6 mt-8 max-w-[925px]">
               {FEATURES.map((feature) => (
-                <div key={feature.title} className="border-t border-[#eff0f2] pt-5">
-                  <h3 className="text-xl font-semibold text-midnight-graphite mb-3">{feature.title}</h3>
-                  <p className="text-base leading-relaxed text-midnight-graphite/70">{feature.text}</p>
+                <div key={feature.title} className="ben-block-inner">
+                  <p>
+                    <strong>{feature.title}</strong>
+                    {feature.text}
+                  </p>
                 </div>
               ))}
             </div>

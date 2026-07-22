@@ -20,39 +20,48 @@ export function AiStudioQuote({
   className,
 }: AiStudioQuoteProps) {
   return (
-    <section className={className ?? "ai-studio-quote relative overflow-hidden py-[52px]"}>
-      <div className="mx-auto max-w-[760px] px-5 text-center lg:px-[15px]">
-        <blockquote>
-          <p className="mt-0 text-[clamp(18px,3vw,32px)] font-normal leading-[1.25] text-canvas-white lg:text-[32px] lg:leading-10">
-            &ldquo;{text}&rdquo;
-          </p>
-        </blockquote>
+    <section className={className ?? "quotes_section"}>
+      <div className="container-default-sm">
+        <div className="ap_tabs_quote">
+          <div className="quote">
+            <p>&ldquo;{text}&rdquo;</p>
+          </div>
 
-        <div className="mt-10 flex justify-center">
-          <div className="flex items-center">
-            <div className="w-[99px] shrink-0">
-              <Image
-                src={photo}
-                alt={author}
-                width={200}
-                height={249}
-                className="h-auto w-[99px]"
-              />
-            </div>
-            <div className="pl-5 text-left">
-              <p className="mb-2 text-[16px] font-normal leading-[1.625] text-canvas-white">
-                <strong className="font-semibold">{author}</strong>
-                <br />
-                {role}
-              </p>
-              {companyLogo ? (
+          <div className="author">
+            <div className="left">
+              <figure className="wp-block-image size-full is-resized">
                 <Image
-                  src={companyLogo}
-                  alt={company ?? ""}
-                  width={127}
-                  height={27}
-                  className="h-6 w-auto brightness-0 invert"
+                  src={photo}
+                  alt={author}
+                  width={200}
+                  height={249}
+                  className="wp-image-62875"
+                  style={{ width: "100px" }}
                 />
+              </figure>
+            </div>
+
+            <div className="right">
+              <div className="name">
+                <p><strong>{author}</strong></p>
+              </div>
+
+              <div className="title">
+                <p>{role}</p>
+              </div>
+
+              {companyLogo ? (
+                <div className="logo">
+                  <figure className="wp-block-image size-full is-resized">
+                    <Image
+                      src={companyLogo}
+                      alt={company ?? ""}
+                      width={127}
+                      height={27}
+                      style={{ width: company === "Vanguard" ? "126px" : "156px" }}
+                    />
+                  </figure>
+                </div>
               ) : null}
             </div>
           </div>

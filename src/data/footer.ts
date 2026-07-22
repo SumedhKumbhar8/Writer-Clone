@@ -40,16 +40,16 @@ export const footerData = {
     {
       title: "Resources",
       links: [
-        { label: "Guides", href: "https://writer.com/guides/" },
-        { label: "AI blog", href: "https://writer.com/blog/" },
+        { label: "Guides", href: "/guides" },
+        { label: "AI blog", href: "/blog" },
         { label: "AI Agent Library", href: "https://writer.com/agents/" },
-        { label: "Engineering blog", href: "https://writer.com/engineering/" },
+        { label: "Engineering blog", href: "/engineering" },
         { label: "Enterprise AI agents", href: "https://writer.com/blog/ai-agents/" },
       ],
       secondaryLinks: [
         { label: "GEO optimization", href: "https://writer.com/blog/geo-aeo-optimization/" },
         { label: "Blog title generator", href: "https://writer.com/agents/blog-title/" },
-        { label: "Marketing AI ROI calculator", href: "https://writer.com/ai-roi-calculator/" },
+        { label: "Marketing AI ROI calculator", href: "/ai-roi-calculator/" },
       ],
     },
     {
@@ -69,7 +69,7 @@ export const footerData = {
         { label: "Status", href: "https://status.writer.com/" },
         { label: "Help center", href: "https://support.writer.com/" },
         { label: "Trust center", href: "https://trustcenter.writer.com/" },
-        { label: "AI Academy", href: "https://academy.writer.com/" },
+        { label: "AI Academy", href: "/academy" },
         { label: "Developer docs", href: "https://dev.writer.com/" },
       ],
     },

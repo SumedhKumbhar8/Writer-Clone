@@ -1,14 +1,15 @@
 export const WRITER_AGENT_HERO = {
   icon: "https://writer.com/wp-content/uploads/2026/04/mouse-pointer-click.png",
   label: "WRITER AGENT",
-  title: "Your team's capacity, multiplied.",
+  // ponytail: U+2028 matches writer.com soft line breaks; swap for <br> if CMS-driven copy lands
+  title: "Your team\u2019s capacity,\u2028multiplied.",
   description:
-    "WRITER Agent autonomously plans and executes work across your data and tools, grounded in your context and governed by enterprise controls.",
+    "WRITER Agent autonomously plans and executes work across your data and tools,\u2028grounded in your context and governed by enterprise controls.",
   image: {
     src: "https://writer.com/wp-content/uploads/2026/04/Frame-2055247851.png",
     alt: "WRITER Agent interface with prompt input and suggested workflows",
-    width: 620,
-    height: 354,
+    width: 1050,
+    height: 600,
   },
 } as const;
 
@@ -100,7 +101,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/Group-5768-2.png",
     alt: 'Playbooks — repeatable workflows, not one-off prompts',
     width: 1030,
-    height: 819,
+    height: 958,
     slideWidth: 515,
   },
   {
@@ -108,7 +109,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/img_d65ea7.png",
     alt: "Connectors — works across your tools, so you don't have to",
     width: 1030,
-    height: 819,
+    height: 958,
     slideWidth: 515,
   },
   {
@@ -116,7 +117,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/img-1-2.png",
     alt: "Skills — domain expertise, captured once and scaled everywhere",
     width: 1030,
-    height: 819,
+    height: 958,
     slideWidth: 515,
   },
   {
@@ -124,7 +125,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/img-2-1.png",
     alt: "Voice profiles — brand standards, enforced everywhere",
     width: 1030,
-    height: 789,
+    height: 958,
     slideWidth: 515,
   },
   {
@@ -132,7 +133,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/img-3.png",
     alt: "Presentations — on-brand slides, automatically",
     width: 1030,
-    height: 789,
+    height: 958,
     slideWidth: 515,
   },
   {
@@ -140,7 +141,7 @@ export const WRITER_AGENT_FEATURES = [
     src: "https://writer.com/wp-content/uploads/2026/04/img-4.png",
     alt: "My Work — all your deliverables, organized and shared in one place",
     width: 1030,
-    height: 789,
+    height: 958,
     slideWidth: 515,
   },
 ] as const;

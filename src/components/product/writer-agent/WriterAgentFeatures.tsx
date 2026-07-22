@@ -5,36 +5,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { WRITER_AGENT_FEATURES } from "@/data/writer-agent";
 import { useMounted } from "@/hooks/useMounted";
 
-function CarouselArrow({ direction }: { direction: "prev" | "next" }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="6"
-      height="11"
-      viewBox="0 0 6 11"
-      fill="none"
-      aria-hidden
-      className="text-canvas-white"
-    >
-      {direction === "prev" ? (
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M5.42847 10.8569L-0.00010419 5.42836L5.42847 -0.000208855L5.42847 10.8569Z"
-          fill="currentColor"
-        />
-      ) : (
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M0 10.8569L5.42857 5.42836L-4.7458e-07 -0.000208855L0 10.8569Z"
-          fill="currentColor"
-        />
-      )}
-    </svg>
-  );
-}
-
 export function WriterAgentFeatures() {
   const mounted = useMounted();
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -93,51 +63,42 @@ export function WriterAgentFeatures() {
   };
 
   return (
-    <section className="writer-agent-features bg-[#1B1B1D] py-[70px]">
-      <div className="mx-auto max-w-[1080px] px-5 lg:px-[15px]">
-        <div className="mx-auto max-w-[760px] text-center">
-          <h5 className="mb-4 text-[13px] font-medium uppercase tracking-[1px] text-canvas-white">
-            KEY FEATURES
-          </h5>
-          <h2 className="text-[clamp(28px,4vw,40px)] font-medium leading-[1.2] tracking-[-0.8px] text-canvas-white">
-            See WRITER Agent in action.
-          </h2>
-          <p className="mx-auto mt-5 max-w-[560px] text-[20px] leading-[1.5] text-[#D2D4D7]">
-            Take a peek at how WRITER works in under a minute.
-          </p>
+    <section className="hp-customers">
+      <div className="container-default-sm">
+        <div className="spotlight_slider_title">
+          <h5>KEY FEATURES</h5>
+          <h2>See WRITER Agent in action.</h2>
+          <p>Take a peek at how WRITER works in under a minute.</p>
         </div>
       </div>
 
-      <div className="mt-14">
-        <div
-          ref={scrollRef}
-          className="flex snap-x snap-mandatory gap-[15px] overflow-x-auto pl-5 pr-5 [-ms-overflow-style:none] [scrollbar-width:none] lg:pl-[calc((100vw-1080px)/2+15px)] lg:pr-10 [&::-webkit-scrollbar]:hidden"
-        >
+      <div className="spotlight_swiper">
+        <div className="flex snap-x snap-mandatory gap-[15px] overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" ref={scrollRef}>
           {WRITER_AGENT_FEATURES.map((feature, index) => (
-            <article
+            <div
               key={feature.id}
-              ref={(node) => {
-                slideRefs.current[index] = node;
-              }}
-              className="snap-start shrink-0"
+              ref={(node) => { slideRefs.current[index] = node; }}
+              className="swiper-slide snap-start shrink-0"
               style={{ width: `min(${feature.slideWidth}px, calc(100vw - 40px))` }}
             >
-              <figure className="overflow-hidden rounded-xl">
-                <Image
-                  src={feature.src}
-                  alt={feature.alt}
-                  width={feature.width}
-                  height={feature.height}
-                  className="h-auto w-full"
-                  sizes={`(max-width: 640px) calc(100vw - 40px), ${feature.slideWidth}px`}
-                  draggable={false}
-                />
-              </figure>
-            </article>
+              <div className="spotlight_card">
+                <figure className="wp-block-image size-full">
+                  <Image
+                    src={feature.src}
+                    alt={feature.alt}
+                    width={feature.width}
+                    height={feature.height}
+                    className="h-auto w-full"
+                    sizes={`(max-width: 640px) calc(100vw - 40px), ${feature.slideWidth}px`}
+                    draggable={false}
+                  />
+                </figure>
+              </div>
+            </div>
           ))}
         </div>
 
-        <div className="mx-auto mt-6 flex max-w-[1080px] gap-3.5 px-5 lg:px-[15px]">
+        <div className="swiper_spotlight_next_prev_wrapper">
           {mounted ? (
             <>
               <button
@@ -145,28 +106,28 @@ export function WriterAgentFeatures() {
                 aria-label="Previous slide"
                 disabled={!canScrollPrev}
                 onClick={() => scrollToSlide(Math.max(activeIndex - 1, 0))}
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#333333] transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
-                suppressHydrationWarning
+                className="swiper-button-prev"
               >
-                <CarouselArrow direction="prev" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none" aria-hidden>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M5.42847 10.8569L-0.00010419 5.42836L5.42847 -0.000208855L5.42847 10.8569Z" fill="currentColor" />
+                </svg>
               </button>
               <button
                 type="button"
                 aria-label="Next slide"
                 disabled={!canScrollNext}
-                onClick={() =>
-                  scrollToSlide(Math.min(activeIndex + 1, WRITER_AGENT_FEATURES.length - 1))
-                }
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#333333] transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
-                suppressHydrationWarning
+                onClick={() => scrollToSlide(Math.min(activeIndex + 1, WRITER_AGENT_FEATURES.length - 1))}
+                className="swiper-button-next"
               >
-                <CarouselArrow direction="next" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none" aria-hidden>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M0 10.8569L5.42857 5.42836L-4.7458e-07 -0.000208855L0 10.8569Z" fill="currentColor" />
+                </svg>
               </button>
             </>
           ) : (
             <div className="flex gap-3.5" aria-hidden>
-              <span className="h-[38px] w-[38px] rounded-full bg-[#333333] opacity-35" />
-              <span className="h-[38px] w-[38px] rounded-full bg-[#333333]" />
+              <span className="h-[38px] w-[38px] rounded-full bg-[#4F4F4F] opacity-35" />
+              <span className="h-[38px] w-[38px] rounded-full bg-[#4F4F4F]" />
             </div>
           )}
         </div>

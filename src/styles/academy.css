@@ -1,0 +1,587 @@
+/* PP Migra — same sources as academy.writer.com */
+@font-face {
+  font-family: "PP Migra";
+  src: url("https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F9b93qzoamghgthv2xps1h1odb%2Fpublic%2F1773869142%2FPPMigra-Light.otf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Migra";
+  src: url("https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F9b93qzoamghgthv2xps1h1odb%2Fpublic%2F1773869162%2FPPMigra-Regular.otf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Migra";
+  src: url("https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F9b93qzoamghgthv2xps1h1odb%2Fpublic%2F1773869182%2FPPMigra-Extrabold.otf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+.academy-page {
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.academy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+.academy-header-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.academy-header-logo {
+  display: block;
+  height: 50px;
+  width: auto;
+  max-width: 250px;
+}
+
+.academy-header-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0;
+  padding-right: 8px;
+}
+
+.academy-nav-link {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 12px;
+  text-decoration: none;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.academy-nav-link:hover {
+  opacity: 0.7;
+}
+
+.academy-learn {
+  position: relative;
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.academy-learn-btn {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.academy-learn-btn::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #000;
+}
+
+.academy-learn-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #e4e7ed;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  padding: 8px 0;
+  z-index: 20;
+}
+
+.academy-learn:hover .academy-learn-menu,
+.academy-learn:focus-within .academy-learn-menu {
+  display: block;
+}
+
+.academy-learn-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.academy-learn-menu a:hover {
+  color: #1484ba;
+  background: #f7f7f9;
+}
+
+.academy-search {
+  position: relative;
+  margin: 0 8px 0 12px;
+}
+
+.academy-search input {
+  width: 193px;
+  height: 32px;
+  padding: 7px 28px 7px 7px;
+  border: 1.6px solid #ccc;
+  border-radius: 4px;
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+  outline: none;
+}
+
+.academy-search input::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.academy-search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.academy-sign-in {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  padding: 5px 20px;
+  margin-right: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.academy-sign-in:hover {
+  opacity: 0.7;
+}
+
+/* ── Hero ── */
+.academy-hero {
+  padding: 110px 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.academy-hero-title {
+  font-family: "PP Migra", Georgia, serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 100px;
+  color: #000;
+  margin: 0;
+}
+
+.academy-hero-sub {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 44.8px;
+  color: #000;
+  margin: 10px 0 0;
+  max-width: 700px;
+}
+
+/* ── AI Search iframe ── */
+.academy-iframe-wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px 20px;
+  margin-top: 0;
+}
+
+.academy-iframe {
+  display: block;
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+/* ── Featured widgets ── */
+.academy-widgets {
+  padding: 40px 0 0;
+}
+
+.academy-widget {
+  box-sizing: border-box;
+  background-color: #edebf3;
+  border-radius: 20px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  max-width: 1275px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.academy-widget--more {
+  background-color: #f7f0f0;
+}
+
+.academy-widget-intro {
+  flex: 0 0 270px;
+  min-width: 200px;
+  padding-right: 16px;
+}
+
+.academy-widget-heading {
+  color: #000;
+  font-family: "PP Migra", Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+  margin: 0 0 14px;
+}
+
+.academy-widget-sub {
+  font-size: 18px;
+  font-family: Graphik, Poppins, sans-serif;
+  line-height: 180%;
+  color: #333;
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+.academy-widget-cta {
+  display: inline-block;
+  padding: 9px 20px;
+  border: 1.5px solid #111;
+  border-radius: 999px;
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  color: #111;
+  line-height: 180%;
+  text-decoration: none;
+  background: transparent;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.academy-widget-cta:hover {
+  background: #111;
+  color: #fff;
+}
+
+.academy-widget-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.academy-card {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 277px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 0 64px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.academy-card:hover {
+  outline: none;
+}
+
+.academy-card-tag-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 19px 0;
+  margin-top: 15px;
+}
+
+.academy-card-tag {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000;
+  background: transparent;
+  padding: 10px 0 0;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+.academy-card-title {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000;
+  padding: 0 24px;
+  margin: 16px 0 0;
+}
+
+.academy-card-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 16px;
+  height: auto;
+}
+
+/* ── Resources footer (black) ── */
+.academy-resources-footer {
+  background: #000;
+  margin-top: 90px;
+}
+
+.academy-resources-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 20px 0;
+}
+
+.academy-resources-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 27px;
+  padding-bottom: 2.5rem;
+}
+
+.academy-resources-col {
+  flex: 1;
+}
+
+.academy-resources-divider {
+  width: 1px;
+  background-color: #4f4f4f;
+  align-self: stretch;
+}
+
+.academy-resources-heading {
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.academy-resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.academy-resources-list a {
+  font-family: Poppins, sans-serif;
+  color: #bdbdbd;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.academy-resources-list a:hover {
+  color: #fff;
+}
+
+.academy-help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.academy-help-btn:hover {
+  color: #d2d4d7;
+}
+
+.academy-help-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* ── Bottom legal bar (nested inside black footer) ── */
+.academy-legal-bar {
+  background: #000;
+  min-height: 150px;
+  margin-top: 50px;
+}
+
+.academy-legal-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  padding: 0 100px;
+  max-width: 100%;
+}
+
+.academy-legal-text,
+.academy-legal-text a {
+  color: #828282 !important;
+  font-size: 15px !important;
+  font-family: Graphik, Poppins, sans-serif;
+  text-decoration: none;
+}
+
+.academy-legal-logo {
+  width: 85px;
+  height: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1367px) {
+  .academy-widget {
+    margin: 0 30px 30px;
+    width: unset;
+  }
+}
+
+@media (max-width: 1167px) {
+  .academy-widget {
+    flex-direction: column;
+  }
+  .academy-widget-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .academy-widget-intro {
+    text-align: center;
+    flex: 0 0 auto;
+    padding: 0 26px;
+  }
+  .academy-card {
+    flex: 1 1 240px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .academy-hero-title {
+    font-size: 64px;
+    line-height: 70px;
+  }
+  .academy-hero-sub {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  .academy-iframe {
+    height: 900px;
+  }
+  .academy-nav-link,
+  .academy-learn,
+  .academy-search {
+    display: none;
+  }
+  .academy-legal-inner {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 820px) {
+  .academy-widget {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 20px;
+  }
+  .academy-widget-intro {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  .academy-widget-cards {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .academy-resources-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .academy-resources-divider {
+    display: none;
+  }
+  .academy-legal-inner {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding: 32px 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .academy-hero {
+    padding-top: 90px;
+  }
+  .academy-hero-title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .academy-hero-sub {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .academy-widget-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .academy-iframe {
+    height: 1100px;
+  }
+  .academy-header-logo {
+    height: 36px;
+  }
+}

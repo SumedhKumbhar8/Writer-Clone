@@ -6,7 +6,7 @@
 }
 
 .text-heading-lg {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.125rem);
   line-height: var(--leading-heading-lg);
   font-weight: var(--font-weight-semibold);
 }

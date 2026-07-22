@@ -409,7 +409,7 @@ export const techPageData = {
         description:
           "Get an instant, personalized ROI calculation and see how WRITER transforms marketing workflows with agentic AI.",
         cta: "Calculate your ROI",
-        href: "https://writer.com/ai-roi-calculator/",
+        href: "/ai-roi-calculator/",
       },
     ],
   },

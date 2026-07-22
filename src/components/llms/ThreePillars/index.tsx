@@ -3,7 +3,7 @@ import { THREE_PILLARS } from "@/data/llms";
 
 export function ThreePillars() {
   return (
-    <div className="section-pt section-pb">
+      <div className="section-pt section-pb" style={{ padding: "60px 0" }}>
       <div className="container" style={{ maxWidth: 1136 }}>
         <div className="grid grid-cols-1 gap-8 xl:grid-cols-3">
           {THREE_PILLARS.map((pillar) => (

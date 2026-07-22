@@ -19,6 +19,7 @@ export function NewsletterForm() {
     >
       <input
         type="email"
+        name="newsletter-email"
         placeholder={footerData.newsletter.placeholder}
         autoComplete="email"
         required

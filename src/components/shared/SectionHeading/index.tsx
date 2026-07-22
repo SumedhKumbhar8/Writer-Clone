@@ -23,7 +23,7 @@ export function SectionHeading({
         className,
       )}
     >
-      {eyebrow && <p className="text-caption text-action-blue">{eyebrow}</p>}
+      {eyebrow && <p className="text-caption text-action-blue mb-[10px]">{eyebrow}</p>}
       <h2 className="text-heading-lg">{title}</h2>
       {description && <p className="text-body max-w-2xl text-slate-gray">{description}</p>}
     </div>

@@ -17,7 +17,7 @@ export const metadata = createPageMetadata({
 export default function LlmsPage() {
   const { title, primaryCta, secondaryCta } = LLMS_CTA;
   return (
-    <>
+    <div className="llms-page">
       <LlmsHero />
       <ThreePillars />
       <BenchmarksSection />
@@ -27,28 +27,34 @@ export default function LlmsPage() {
       {/* Bottom CTA — matches writer.com section-bottom-cta-fs */}
       <div
         className="section-bottom-cta-fs section-pt-sm section-pb-sm"
-        style={{ backgroundColor: "#f6effd" }}
+        style={{ backgroundColor: "#f6effd", padding: "100px 0" }}
       >
         <div className="container" style={{ maxWidth: 1136 }}>
           <h2
             className="mx-auto px-0 text-center"
-            style={{ maxWidth: 830 }}
+            style={{
+              maxWidth: 830,
+              fontFamily: "var(--font-poppins)",
+              fontSize: 44,
+              fontWeight: 400,
+              lineHeight: 1.3,
+              color: "#000",
+              margin: 0,
+            }}
           >
             {title}
           </h2>
-          <div className="mt-4">
+          <div style={{ marginTop: 32 }}>
             <div className="wpm-btns-row">
               <Link
                 href={primaryCta.href}
-                className="dc-btn dc-btn_outline-secondary dc-btn_fix-5"
-                style={{ width: "100%", maxWidth: 260 }}
+                className="dc-btn dc-btn_outline-secondary"
               >
                 {primaryCta.label}
               </Link>
               <Link
                 href={secondaryCta.href}
-                className="dc-btn dc-btn_secondary dc-btn_fix-5"
-                style={{ width: "100%", maxWidth: 260 }}
+                className="dc-btn dc-btn_secondary"
               >
                 {secondaryCta.label}
               </Link>
@@ -56,6 +62,6 @@ export default function LlmsPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

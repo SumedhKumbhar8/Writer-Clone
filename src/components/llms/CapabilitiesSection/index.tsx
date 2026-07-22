@@ -11,16 +11,12 @@ export function CapabilitiesSection() {
           <div className="mb-2">
             <Image src={icon} alt="" width={48} height={48} aria-hidden />
           </div>
-          <p className="m-0 text-[13px] font-semibold uppercase tracking-[1.6px] text-midnight-graphite">
-            {label}
-          </p>
+          <p className="llms-section-label">{label}</p>
         </div>
 
         <div className="text-center">
-          <h2 className="m-0 text-[clamp(28px,3vw,40px)] font-medium leading-snug text-midnight-graphite">
-            {title}
-          </h2>
-          <p className="mb-0 mt-2 text-[18px] leading-normal text-slate-gray" style={{ maxWidth: 580, marginInline: "auto" }}>
+          <h2 className="llms-section-title">{title}</h2>
+          <p className="llms-section-desc mt-2" style={{ maxWidth: 580, marginInline: "auto" }}>
             {description}
           </p>
         </div>

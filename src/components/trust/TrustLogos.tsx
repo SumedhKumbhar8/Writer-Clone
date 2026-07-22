@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/shared/Reveal";
 
 const LOGOS = [
+  { src: "https://writer.com/wp-content/uploads/2025/03/Vector.svg", alt: "WTW" },
   { src: "https://writer.com/wp-content/uploads/2024/03/Group_ac7abc.svg", alt: "Vanguard" },
   { src: "https://writer.com/wp-content/uploads/2024/03/Frame-3602.svg", alt: "Salesforce" },
   { src: "https://writer.com/wp-content/uploads/2024/03/Qualcomm.svg?w=640", alt: "Qualcomm" },
@@ -20,12 +21,11 @@ const LOGOS = [
   { src: "https://writer.com/wp-content/uploads/2024/03/Adore-me.svg", alt: "Adore Me" },
   { src: "https://writer.com/wp-content/uploads/2024/03/6sense.svg", alt: "6sense" },
   { src: "https://writer.com/wp-content/uploads/2025/07/Layer_1.svg", alt: "Commvault" },
-  { src: "https://writer.com/wp-content/uploads/2025/03/Vector.svg", alt: "WTW" },
 ];
 
 export function TrustLogos() {
   return (
-    <section className="wr-pt-14 section-icon-scroll section-pb-xs py-[52px] overflow-hidden">
+    <section className="wr-pt-14 section-icon-scroll section-pb-xs trust-logos" style={{ padding: "56px 0 50px" }}>
       <div className="logos-gradient-container mx-auto max-w-[1080px] px-5 lg:px-[15px]">
         <Reveal>
           <div className="logos-gradient-1 logos-gradient-1_resp logos-gradient-1_flex overflow-hidden">

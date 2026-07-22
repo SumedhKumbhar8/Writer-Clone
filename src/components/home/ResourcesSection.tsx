@@ -1,159 +1,96 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ACADEMY_IMAGE =
-  "https://writer.com/wp-content/uploads/2026/04/Share-image-Big-Book-of-Writer%E2%80%A8venterprise-AI-use-cases.png";
-
-const ACADEMY_HREF = "https://academy.writer.com/";
+const ACADEMY_IMG = "https://writer.com/wp-content/uploads/2026/04/Share-image-Big-Book-of-Writer%E2%80%A8venterprise-AI-use-cases.png";
 
 const RESOURCES = [
   {
-    title: "WRITER at work webinar",
-    description:
-      "Join a 30-minute walkthrough of the latest WRITER features that help marketing teams create on-brand assets fast without sacrificing quality.",
-    cta: "Watch webinar on-demand",
-    href: "https://go.writer.com/writer-work-march-2026",
-    image: {
-      src: "https://writer.com/wp-content/uploads/2026/03/WRITER-at-work-webinar.png",
-      alt: "WRITER at work webinar",
-      width: 321,
-      height: 180,
-    },
+    title: "How to create an AI-native marketing engine",
+    description: "Four proven AI workflows already driving pipeline impact across enterprise marketing teams.",
+    cta: "Get the guide",
+    href: "https://go.writer.com/ai-native-marketing-engine",
+    img: "https://writer.com/wp-content/uploads/2026/07/Slide-16_9-167-1.png",
   },
   {
-    title: "New at WRITER: Codify and scale your team's expertise",
-    description:
-      "Scale your AI operations with WRITER's March release: codify expertise with Skills, automate brand-compliant presentations, and more.",
-    cta: "Read the blog",
-    href: "https://writer.com/blog/new-roundup-march-2026/",
-    image: {
-      src: "https://writer.com/wp-content/uploads/2026/03/hp-resources-writer-at-work.png",
-      alt: "New at WRITER: Codify and scale your team's expertise",
-      width: 321,
-      height: 180,
-    },
+    title: "Free up time with everyday marketing automations",
+    description: "Join a 30-minute walkthrough on how to automate the routine work eating up your day.",
+    cta: "Watch the recording",
+    href: "https://go.writer.com/writer-at-work-may",
+    img: "https://writer.com/wp-content/uploads/2026/07/Presentation-deck-cover-image-for-goldcast-1.png",
   },
   {
-    title: "The AI playbooks that 10x marketers run",
-    description:
-      "Discover production-ready workflows for content, campaigns, SEO/GEO, brand, and demand generation teams.",
-    cta: "Explore playbooks hub",
-    href: "https://go.writer.com/marketing-playbooks",
-    image: {
-      src: "https://writer.com/wp-content/uploads/2026/03/The-AI-playbooks-that-10x-marketers-run.png",
-      alt: "The AI playbooks that 10x marketers run",
-      width: 321,
-      height: 180,
-    },
+    title: "New at WRITER: Brand systems built for an AI era",
+    description: "Scale brand consistency in WRITER with unified voice profiles, terminology lists, style guides.",
+    cta: "Read more",
+    href: "https://writer.com/blog/new-roundup-may-2026/",
+    img: "https://writer.com/wp-content/uploads/2026/07/2026-05-May-release-3-1.png",
   },
   {
-    title: "Marketing AI ROI calculator",
-    description:
-      "Get an instant, personalized ROI calculation and see how WRITER transforms marketing workflows with agentic AI.",
-    cta: "Calculate your AI ROI now",
-    href: "https://writer.com/ai-roi-calculator/",
-    image: {
-      src: "https://writer.com/wp-content/uploads/2026/03/Marketing-AI-ROI-calculator.png",
-      alt: "Marketing AI ROI calculator",
-      width: 321,
-      height: 180,
-    },
+    title: "How to maintain and scale your brand DNA",
+    description: "Learn how Global 2000 marketing leaders protect AI brand integrity.",
+    cta: "Download the guide",
+    href: "https://go.writer.com/ai-brand-integrity",
+    img: "https://writer.com/wp-content/uploads/2026/07/Slide-16_9-168-1.png",
   },
 ];
 
 export function ResourcesSection() {
   return (
-    <section className="bg-[#1A1A1C] py-20 lg:py-28" id="resources">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-        <div className="mx-auto max-w-[760px] text-center">
-          <h4 className="mb-4 text-[13px] font-medium uppercase tracking-[1px] text-canvas-white">
-            RESOURCES
-          </h4>
-          <h2 className="text-[clamp(28px,4vw,40px)] font-medium leading-[1.2] tracking-[-0.8px] text-canvas-white lg:mb-10">
-            Everything your marketing team
-            <br className="hidden lg:inline" />
-            needs to go AI-native
-          </h2>
-        </div>
+    <section className="bg-[#1A1A1C] py-[112px]" id="resources">
+      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
+        <h4 className="mb-0 text-center text-[13px] font-medium uppercase leading-[1.6] tracking-[1px] text-canvas-white">
+          RESOURCES
+        </h4>
+        <h2 className="mb-10 text-center text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-canvas-white">
+          Everything your marketing team needs to go AI-native
+        </h2>
 
-        <div className="mt-10 grid gap-10 lg:mt-0 lg:grid-cols-2 lg:gap-12">
+        <div className="grid gap-[25px] lg:grid-cols-2">
           <article>
-            <Link href={ACADEMY_HREF} target="_blank" rel="noopener noreferrer" className="block">
+            <Link href="/academy" className="block">
               <figure className="overflow-hidden rounded-[10px]">
                 <Image
-                  src={ACADEMY_IMAGE}
-                  alt="WRITER Academy — Learn today. Lead tomorrow."
-                  width={1024}
-                  height={587}
+                  src={ACADEMY_IMG}
+                  alt="WRITER Academy"
+                  width={1024} height={587}
                   className="h-auto w-full"
                   sizes="(max-width: 1024px) 100vw, 560px"
                 />
               </figure>
             </Link>
-
             <h3 className="mt-3.5 text-[16px] font-medium leading-6 text-canvas-white">
-              <Link
-                href={ACADEMY_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-70"
-              >
+              <Link href="/academy" className="transition-opacity hover:opacity-70">
                 WRITER Academy
               </Link>
             </h3>
-
             <p className="mt-2 max-w-[323px] text-[12px] leading-5 text-fog">
-              <Link
-                href={ACADEMY_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-70"
-              >
-                Master WRITER with certifications, self-paced courses, and quick video tutorials
-                covering everything from generative AI basics to building custom AI agents.
+              <Link href="/academy" className="transition-opacity hover:opacity-70">
+                Master WRITER with certifications, self-paced courses, and quick video tutorials.
               </Link>
             </p>
-
             <p className="mt-2 text-[12px] font-semibold leading-5 text-fog">
-              <Link
-                href={ACADEMY_HREF}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-70"
-              >
+              <Link href="/academy" className="transition-opacity hover:opacity-70">
                 Explore certifications
               </Link>
             </p>
           </article>
 
           <div className="flex flex-col gap-[25px]">
-            {RESOURCES.map((item) => (
+            {RESOURCES.map((r) => (
               <Link
-                key={item.title}
-                href={item.href}
+                key={r.title}
+                href={r.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex max-w-[550px] flex-col items-start gap-4 sm:flex-row sm:items-center lg:ml-auto"
+                className="group flex items-start gap-4 transition-opacity hover:opacity-80"
               >
-                <figure className="h-[90px] w-full shrink-0 overflow-hidden rounded-[10px] sm:w-[160px]">
-                  <Image
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    width={item.image.width}
-                    height={item.image.height}
-                    className="h-full w-full object-cover"
-                    sizes="160px"
-                  />
+                <figure className="h-[90px] w-[160px] shrink-0 overflow-hidden rounded-[10px]">
+                  <Image src={r.img} alt="" width={321} height={180} className="h-full w-full object-cover" sizes="160px" />
                 </figure>
-
                 <div>
-                  <h4 className="text-[16px] font-medium leading-6 text-canvas-white">
-                    {item.title}
-                  </h4>
-                  <p className="mt-1 text-[12px] leading-5 text-fog">{item.description}</p>
-                  <p className="mt-1 text-[12px] font-semibold leading-5 text-fog group-hover:opacity-70">
-                    {item.cta}
-                  </p>
+                  <h4 className="text-[16px] font-medium leading-6 text-canvas-white">{r.title}</h4>
+                  <p className="mt-1 text-[12px] leading-5 text-fog">{r.description}</p>
+                  <p className="mt-1 text-[12px] font-semibold leading-5 text-fog">{r.cta}</p>
                 </div>
               </Link>
             ))}

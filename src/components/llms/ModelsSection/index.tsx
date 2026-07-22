@@ -12,31 +12,25 @@ export function ModelsSection() {
           <div className="mb-2">
             <Image src={icon} alt="" width={48} height={48} aria-hidden />
           </div>
-          <p className="m-0 text-[13px] font-semibold uppercase tracking-[1.6px] text-midnight-graphite">
-            {label}
-          </p>
+          <p className="llms-section-label">{label}</p>
         </div>
 
         <div className="text-center">
-          <h2 className="m-0 text-[clamp(28px,3vw,40px)] font-medium leading-snug text-midnight-graphite">
-            {title}
-          </h2>
-          <p className="mb-0 mt-2 text-[14px] leading-relaxed text-slate-gray">
-            {description}
-          </p>
+          <h2 className="llms-section-title">{title}</h2>
+          <p className="llms-section-desc mt-2">{description}</p>
         </div>
 
-        <div className="meet-team-row mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="meet-team-row mt-4 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {models.map((model) => (
             <div key={model.name} className="meet-team-card">
               <div className="meet-team-card__icon">
-                <Image src={model.icon} alt="" width={96} height={96} aria-hidden />
+                <Image src={model.icon} alt="" width={72} height={72} aria-hidden />
               </div>
 
-              <div className="meet-team-card__content-items" style={{ marginTop: 24 }}>
+              <div className="meet-team-card__content-items">
                 <div className="meet-team-card__item">
-                  <h3 style={{ marginBottom: 4 }}>{model.name}</h3>
-                  <p className="mb-0">{model.tagline}</p>
+                  <h3>{model.name}</h3>
+                  <p>{model.tagline}</p>
                 </div>
 
                 <div className="meet-team-card__item">
@@ -59,7 +53,7 @@ export function ModelsSection() {
               </div>
 
               <div className="meet-team-card__link">
-                <Link href={model.href} className="dc-btn dc-btn_secondary dc-btn_small-2 border-0">
+                <Link href={model.href} className="dc-btn">
                   Learn more
                 </Link>
               </div>
@@ -87,9 +81,7 @@ export function ModelsSection() {
           </div>
         </div>
 
-        <p className="mb-0 mt-3 text-center text-[14px] leading-relaxed text-ghost-gray">
-          {disclaimer}
-        </p>
+        <p className="llms-disclaimer mt-3">{disclaimer}</p>
       </div>
     </div>
   );

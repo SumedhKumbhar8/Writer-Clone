@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { footerData } from "@/data/footer";
 import { NewsletterForm } from "@/components/layout/Footer/NewsletterForm";
 import { ScrollToTopButton } from "@/components/layout/Footer/ScrollToTopButton";
@@ -24,6 +27,10 @@ function FooterLinkList({ links }: { links: { label: string; href: string }[] })
 }
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/marketing-playbooks") || pathname.startsWith("/academy"))
+    return null;
+
   return (
     <footer className="relative bg-midnight-graphite text-canvas-white">
       <div className="mx-auto max-w-[1280px] px-5 py-16 lg:px-10 lg:py-20">

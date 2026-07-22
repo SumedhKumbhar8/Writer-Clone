@@ -5,21 +5,10 @@ type TrustedLogosProps = {
 };
 
 export function TrustedLogos({ variant = "light" }: TrustedLogosProps) {
-  const isDark = variant === "dark";
-
   return (
-    <section
-      className="trusted-logos-section py-[38px]"
-      aria-label="Trusted by leading enterprises"
-    >
-      <div className="trusted-logos-inner">
-        <p
-          className={
-            isDark
-              ? "mb-[14px] text-center text-[16px] font-normal leading-[1.6] text-canvas-white"
-              : "trusted-logos-label"
-          }
-        >
+    <section className={`homepage__logos-section${variant === "light" ? " light" : ""}`} aria-label="Trusted by leading enterprises">
+      <div className="container-default-sm">
+        <p className="finServ_hero_logos_text">
           World-class enterprises trust WRITER
         </p>
       </div>

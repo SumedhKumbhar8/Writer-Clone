@@ -6,6 +6,39 @@
 @import "../styles/sections.css";
 @import "../styles/utilities.css";
 @import "../styles/animations.css";
+@import "../styles/writer-sections.css";
+
+@font-face {
+  font-family: "Formula Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/FormulaCondensed/FormulaCondensed-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Graphik/Graphik-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Graphik/Graphik-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: CanelaDeck;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CanelaDeck/canela-deck.woff2") format("woff2");
+}
 
 @layer base {
   *, *::before, *::after {
@@ -20,6 +53,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     --font-poppins: var(--font-poppins-next, 'Poppins'), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-formula: "Formula Condensed", ui-sans-serif, system-ui, sans-serif;
+    --font-graphik: Graphik, var(--font-poppins);
   }
 
   body {

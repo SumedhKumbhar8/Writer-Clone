@@ -34,11 +34,21 @@ const CERTIFICATIONS_ROW2 = [
 
 export function TrustPrivacy() {
   return (
-    <section id="privacy-compliance" className="benefits-block-container section-pt-sm py-[52px]">
+    <section id="privacy-compliance" className="benefits-block-container section-pt-sm">
       <div className="mx-auto max-w-[1080px] px-5 lg:px-[15px]">
-        <div className="benefits-block-row flex flex-col lg:flex-row gap-10 lg:gap-16">
-          <Reveal className="w-full lg:w-5/12 flex-shrink-0">
-            <div className="benefits-block-icon mb-6">
+        <div className="benefits-block-row flex gap-6 lg:gap-9">
+          <Reveal className="benefits-block-icon hidden lg:block flex-shrink-0 w-[120px]">
+            <Image
+              src="https://writer.com/wp-content/uploads/2024/06/Frame-3651-3.svg"
+              alt="Privacy & compliance"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </Reveal>
+
+          <Reveal className="benefits-block-content flex-1 min-w-0">
+            <div className="benefits-block-icon mb-4 lg:hidden">
               <Image
                 src="https://writer.com/wp-content/uploads/2024/06/Frame-3651-3.svg"
                 alt="Privacy & compliance"
@@ -47,54 +57,61 @@ export function TrustPrivacy() {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-[clamp(32px,4vw,44px)] font-medium leading-[1.2] tracking-[-0.88px] text-midnight-graphite mb-4">
-              Meet enterprise privacy and compliance requirements
-            </h2>
-            <p className="text-lg leading-relaxed text-midnight-graphite/70">
-              We built the WRITER platform specifically for enterprises, recognizing the importance of protecting the data you share with us and complying with our obligations under global privacy laws.
+            <p className="head">Privacy &amp; compliance</p>
+            <h2>Meet enterprise privacy and compliance requirements</h2>
+            <p className="benefits-block-desc benefits-block-desc--wide">
+              We built the WRITER platform specifically for enterprises, recognizing
+              the importance of protecting the data you share with us and complying
+              with our obligations under global privacy laws.
             </p>
-            <div className="mt-4 flex gap-6">
-              <Link href="https://writer.com/legal/privacy/" className="text-[#5551ff] underline underline-offset-2 hover:text-[#2e2ae8] text-sm font-medium">
+            <div className="mt-4 flex flex-wrap gap-6">
+              <Link
+                href="https://writer.com/legal/privacy/"
+                className="text-[#5551ff] underline underline-offset-2 hover:text-[#2e2ae8] text-sm font-medium"
+              >
                 Read our Privacy policy
               </Link>
-              <Link href="https://writer.com/legal/data-processing/" className="text-[#5551ff] underline underline-offset-2 hover:text-[#2e2ae8] text-sm font-medium">
+              <Link
+                href="https://writer.com/legal/data-processing/"
+                className="text-[#5551ff] underline underline-offset-2 hover:text-[#2e2ae8] text-sm font-medium"
+              >
                 Data processing agreement
               </Link>
             </div>
-          </Reveal>
 
-          <Reveal className="w-full lg:w-7/12">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div className="row grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8 max-w-[925px]">
               {FEATURES.map((feature) => (
-                <div key={feature.title} className="border-t border-[#eff0f2] pt-5">
-                  <h3 className="text-xl font-semibold text-midnight-graphite mb-3">{feature.title}</h3>
-                  <p className="text-base leading-relaxed text-midnight-graphite/70">{feature.text}</p>
+                <div key={feature.title} className="ben-block-inner">
+                  <p>
+                    <strong>{feature.title}</strong>
+                    {feature.text}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="certifications">
-              <div className="block-logos top_row flex justify-center gap-1 max-w-[460px] mx-auto mb-[-90px] relative z-10">
+            <div className="certifications mt-10">
+              <div className="block-logos top_row">
                 {CERTIFICATIONS_ROW1.map((cert) => (
-                  <div key={cert.alt} className="block-logo w-[130px]">
+                  <div key={cert.alt} className="block-logo">
                     <Image
                       src={cert.src}
                       alt={cert.alt}
-                      width={130}
-                      height={162}
+                      width={217}
+                      height={271}
                       className="w-full h-auto object-contain"
                     />
                   </div>
                 ))}
               </div>
-              <div className="block-logos flex justify-center gap-1 flex-wrap relative z-0 pt-12">
+              <div className="block-logos">
                 {CERTIFICATIONS_ROW2.map((cert) => (
-                  <div key={cert.alt} className="block-logo w-[100px] lg:w-[120px]">
+                  <div key={cert.alt} className="block-logo">
                     <Image
                       src={cert.src}
                       alt={cert.alt}
-                      width={120}
-                      height={150}
+                      width={219}
+                      height={274}
                       className="w-full h-auto object-contain"
                     />
                   </div>

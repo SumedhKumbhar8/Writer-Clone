@@ -32,13 +32,13 @@ export default function AiStudioPage() {
       <AiStudioHero />
       <AiStudioTrustedLogos />
       <AiStudioScrollCards />
-      <AiStudioQuote {...AI_STUDIO_VANGUARD_QUOTE} />
+      <AiStudioQuote {...AI_STUDIO_VANGUARD_QUOTE} className="quotes_section top_quotes_section" />
       <AiStudioWhyWriter />
       <AiStudioSupervise />
       <AiStudioTrust />
       <AiStudioBuild />
       <AiStudioBuilderTools />
-      <AiStudioQuote {...AI_STUDIO_ANNA_QUOTE} className="ai-studio-quote pb-[52px] pt-0" />
+      <AiStudioQuote {...AI_STUDIO_ANNA_QUOTE} className="quotes_section mt-4_5" />
       <AiStudioBottomCTA />
     </div>
   );

@@ -106,6 +106,7 @@ export const AI_STUDIO_SUPERVISE_TABS = [
     id: "observe",
     label: "OBSERVE",
     icon: "https://writer.com/wp-content/uploads/2025/11/Frame-2055247501-3.svg",
+    iconWidth: 148,
     subtitle: "Get full visibility into user and agent behaviors",
     items: [
       {
@@ -132,6 +133,7 @@ export const AI_STUDIO_SUPERVISE_TABS = [
     id: "control",
     label: "CONTROL",
     icon: "https://writer.com/wp-content/uploads/2025/11/Frame-2055247501-1.svg",
+    iconWidth: 157,
     subtitle: "Manage centrally, scale globally to prevent risk",
     items: [
       {
@@ -158,6 +160,7 @@ export const AI_STUDIO_SUPERVISE_TABS = [
     id: "connect",
     label: "CONNECT",
     icon: "https://writer.com/wp-content/uploads/2025/11/Frame-2055247501-2.svg",
+    iconWidth: 160,
     subtitle: "Integrate with the platforms your business relies on",
     items: [
       {
@@ -184,7 +187,7 @@ export const AI_STUDIO_SUPERVISE_TABS = [
 
 export const AI_STUDIO_TRUST = {
   badge: "TRUST",
-  title: "World-class enterprises trust WRITER",
+  title: "World-class\u2028enterprises trust WRITER",
   lockIcon: "https://writer.com/wp-content/uploads/2025/11/lock-line.svg",
   complianceBadges: [
     { alt: "ISO 27701", src: "https://writer.com/wp-content/uploads/2025/11/ai_logo_1.png" },
@@ -199,12 +202,12 @@ export const AI_STUDIO_TRUST = {
   ],
   blocks: [
     {
-      title: "Supervise safe, consistent AI behavior",
+      title: "Supervise safe, consistent AI\u2028behavior",
       description:
         "We give you control over how AI operates across your organization, with mechanisms that allow you to validate actions, apply policies, and shape agentic capabilities across your workflows.",
     },
     {
-      title: "Your data, your systems. We don't train on your data.",
+      title: "Your data, your systems. We\u2028don\u2019t train on your data.",
       description:
         "Connect your agents to your data and systems through governed, permissioned pathways, with visibility into how they're used and full control over what users and agents can access.",
       link: { label: "Learn more", href: "https://writer.com/trust/" },

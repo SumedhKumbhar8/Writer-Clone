@@ -3,18 +3,18 @@ import Link from "next/link";
 
 export function AgentSection() {
   return (
-    <section className="bg-canvas-white py-20 lg:py-28" id="product">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+    <section className="bg-canvas-white py-[21px] pb-[30px]" id="product">
+      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <h4 className="mb-4 text-[16px] font-medium uppercase tracking-[1.6px] text-midnight-graphite">
-            WRITER Agent
+          <h4 className="mb-[10px] text-[16px] font-medium uppercase leading-[1.6] tracking-[1.6px] text-midnight-graphite">
+            WRITER AGENT
           </h4>
-          <h2 className="text-[clamp(28px,4vw,40px)] font-medium leading-[1.2] tracking-[-0.8px] text-midnight-graphite">
+          <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
             Not a tool you prompt.
             <br />
             An agent you delegate to.
           </h2>
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] leading-relaxed text-slate-gray">
+          <p className="mx-auto mt-5 max-w-[560px] text-[16px] leading-[1.6] text-slate-gray">
             Describe what you need and WRITER executes from start to finish, delivering polished,
             on-brand work in minutes.
           </p>
@@ -29,7 +29,7 @@ export function AgentSection() {
         <div className="relative mx-auto mt-14 aspect-[16/10] max-w-[1100px] overflow-hidden rounded-xl bg-lavender-mist">
           <Image
             src="https://writer.com/wp-content/uploads/2026/04/WPI2026-%E2%80%93-8.png"
-            alt="WRITER Agent interface showing Win-Back Email Campaign workflow"
+            alt="WRITER Agent interface"
             fill
             className="object-cover object-top"
             sizes="(max-width: 1100px) 100vw, 1100px"

@@ -43,6 +43,16 @@ export function Header() {
   const headerSolid = isDarkPage || scrolled;
   const headerDark = isDarkPage;
 
+  // Blog / engineering / ROI / playbook hub use their own headers
+  if (
+    pathname.startsWith("/blog") ||
+    pathname.startsWith("/engineering") ||
+    pathname.startsWith("/ai-roi-calculator") ||
+    pathname.startsWith("/marketing-playbooks") ||
+    pathname.startsWith("/academy")
+  )
+    return null;
+
   return (
     <header
       className={cn(
@@ -117,7 +127,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={closeMenu}
-              className="inline-flex h-11 items-center justify-center rounded-full bg-action-blue px-[17px] text-[14px] font-semibold text-canvas-white transition-opacity hover:opacity-90"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-action-blue px-[17px] text-[17px] font-semibold text-canvas-white transition-opacity hover:opacity-90"
             >
               {tryFree.label}
             </Link>

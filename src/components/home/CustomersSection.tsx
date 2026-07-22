@@ -3,258 +3,176 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useMounted } from "@/hooks/useMounted";
 
 const CASE_STUDIES = [
   {
     id: "kpmg",
     image: "https://writer.com/wp-content/uploads/2026/04/Slide-16_9-166.png",
-    width: 976,
-    height: 664,
-    slideWidth: 488,
-    alt: "KPMG case study — 70% time savings on derivative content",
-    link: {
-      href: "https://writer.com/blog/kpmg-customer-story/",
-      text: "See the case study",
-    },
+    width: 976, height: 664, slideWidth: 515,
+    alt: "KPMG case study",
+    link: { href: "https://writer.com/blog/kpmg-customer-story/", text: "See the case study" },
   },
   {
     id: "clorox",
     image: "https://writer.com/wp-content/uploads/2026/04/Frame-2055246598-1.png",
-    width: 976,
-    height: 664,
-    slideWidth: 488,
-    alt: "The Clorox Company case study — 85% savings in time and tasks",
+    width: 976, height: 664, slideWidth: 515,
+    alt: "Clorox case study",
   },
   {
     id: "qualcomm",
     image: "https://writer.com/wp-content/uploads/2026/04/Frame-2055246582.png",
-    width: 980,
-    height: 664,
-    slideWidth: 490,
-    alt: "Qualcomm case study — 2.4k hours saved per month",
-    link: {
-      href: "https://writer.com/blog/qualcomm-customer-story/",
-      text: "See the case study",
-    },
+    width: 980, height: 664, slideWidth: 515,
+    alt: "Qualcomm case study",
+    link: { href: "https://writer.com/blog/qualcomm-customer-story/", text: "See the case study" },
   },
   {
     id: "vanguard",
     image: "https://writer.com/wp-content/uploads/2026/04/Slide-16_9-166-1.png",
-    width: 976,
-    height: 664,
-    slideWidth: 488,
-    alt: "Vanguard case study — 57% faster time to market",
-    link: {
-      href: "https://writer.com/blog/vanguard-customer-story/",
-      text: "See the case study",
-    },
+    width: 976, height: 664, slideWidth: 515,
+    alt: "Vanguard case study",
+    link: { href: "https://writer.com/blog/vanguard-customer-story/", text: "See the case study" },
   },
   {
     id: "uber",
     image: "https://writer.com/wp-content/uploads/2026/04/Slide-16_9-166-2.png",
-    width: 1174,
-    height: 664,
-    slideWidth: 587,
-    alt: "Uber case study — scales inbound support responses with WRITER",
-    link: {
-      href: "https://writer.com/blog/uber-customer-story/",
-      text: "Uber scales inbound support responses with WRITER",
-    },
+    width: 1174, height: 664, slideWidth: 515,
+    alt: "Uber case study",
+    link: { href: "https://writer.com/blog/uber-customer-story/", text: "See the case study" },
   },
-] as const;
+];
 
-function CarouselArrow({ direction }: { direction: "prev" | "next" }) {
+function Arrow({ dir }: { dir: "prev" | "next" }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="6"
-      height="11"
-      viewBox="0 0 6 11"
-      fill="none"
-      aria-hidden
-      className="text-canvas-white"
-    >
-      {direction === "prev" ? (
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M5.42847 10.8569L-0.00010419 5.42836L5.42847 -0.000208855L5.42847 10.8569Z"
-          fill="currentColor"
-        />
-      ) : (
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M0 10.8569L5.42857 5.42836L-4.7458e-07 -0.000208855L0 10.8569Z"
-          fill="currentColor"
-        />
-      )}
+    <svg xmlns="http://www.w3.org/2000/svg" width={6} height={11} fill="none" aria-hidden>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d={dir === "prev" ? "M5.428 10.857 0 5.428 5.428 0v10.857Z" : "M0 10.857 5.429 5.428 0 0v10.857Z"}
+        fill="currentColor"
+      />
     </svg>
   );
 }
 
-function CaseStudyLink({
-  href,
-  text,
-}: {
-  href: string;
-  text: string;
-}) {
-  return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex flex-row-reverse items-center gap-3 text-[16px] font-medium leading-none text-midnight-graphite transition-opacity hover:opacity-70"
-    >
-      <span>{text}</span>
-      <Image
-        src="https://writer.com/wp-content/uploads/2026/03/Arrow-10.webp"
-        alt=""
-        width={19}
-        height={19}
-        aria-hidden
-        className="h-[19px] w-[19px] shrink-0"
-      />
-    </Link>
-  );
-}
-
 export function CustomersSection() {
-  const mounted = useMounted();
   const scrollRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<(HTMLElement | null)[]>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(true);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-  const updateScrollState = useCallback(() => {
-    const container = scrollRef.current;
-    if (!container) return;
+  useEffect(() => { setMounted(true); }, []);
 
-    const { scrollLeft, scrollWidth, clientWidth } = container;
-    setCanScrollPrev(scrollLeft > 8);
-    setCanScrollNext(scrollLeft + clientWidth < scrollWidth - 8);
-
-    const containerLeft = container.getBoundingClientRect().left;
-    let closestIndex = 0;
-    let closestDistance = Number.POSITIVE_INFINITY;
-
-    slideRefs.current.forEach((slide, index) => {
-      if (!slide) return;
-      const distance = Math.abs(slide.getBoundingClientRect().left - containerLeft);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
+  const update = useCallback(() => {
+    const c = scrollRef.current;
+    if (!c) return;
+    setCanPrev(c.scrollLeft > 8);
+    setCanNext(c.scrollLeft + c.clientWidth < c.scrollWidth - 8);
+    const cl = c.getBoundingClientRect().left;
+    let ci = 0, cd = Infinity;
+    slideRefs.current.forEach((s, i) => {
+      if (!s) return;
+      const d = Math.abs(s.getBoundingClientRect().left - cl);
+      if (d < cd) { cd = d; ci = i; }
     });
-
-    setActiveIndex(closestIndex);
+    setActiveIdx(ci);
   }, []);
 
   useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
+    const c = scrollRef.current;
+    if (!c) return;
+    update();
+    c.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { c.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, [update]);
 
-    updateScrollState();
-
-    container.addEventListener("scroll", updateScrollState, { passive: true });
-    window.addEventListener("resize", updateScrollState);
-
-    return () => {
-      container.removeEventListener("scroll", updateScrollState);
-      window.removeEventListener("resize", updateScrollState);
-    };
-  }, [updateScrollState]);
-
-  const scrollToSlide = (index: number) => {
-    const container = scrollRef.current;
-    const slide = slideRefs.current[index];
-    if (!container || !slide) return;
-
-    container.scrollTo({
-      left: slide.offsetLeft - container.offsetLeft,
-      behavior: "smooth",
-    });
+  const scrollTo = (i: number) => {
+    const c = scrollRef.current;
+    const s = slideRefs.current[i];
+    if (c && s) c.scrollTo({ left: s.offsetLeft - c.offsetLeft, behavior: "smooth" });
   };
 
   return (
-    <section className="customers-section bg-canvas-white py-20 lg:py-28" id="customers">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-        <div className="mx-auto max-w-[760px] text-center">
-          <h5 className="mb-4 text-[16px] font-medium uppercase tracking-[1.6px] text-midnight-graphite">
-            CUSTOMERS
-          </h5>
-          <h2 className="text-[clamp(28px,4vw,40px)] font-medium leading-[1.2] tracking-[-0.8px] text-midnight-graphite">
-            Measurable outcomes from leading enterprises.
-          </h2>
-        </div>
+    <section className="bg-[#1B1B1D] py-[110px]" id="customers">
+      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
+        <h5 className="mb-[19px] text-[13px] font-medium uppercase leading-[1.6] tracking-[1px] text-canvas-white">
+          CUSTOMERS
+        </h5>
+        <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-canvas-white">
+          Measurable outcomes from leading enterprises.
+        </h2>
       </div>
 
-      <div className="customers-carousel-wrap mt-14">
+      <div className="relative mt-10">
         <div
           ref={scrollRef}
-          className="customers-carousel flex snap-x snap-mandatory gap-[30px] overflow-x-auto pl-5 pr-5 [-ms-overflow-style:none] [scrollbar-width:none] lg:pl-10 lg:pr-10 [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-[30px] overflow-x-auto pl-[15px] pr-[15px] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {CASE_STUDIES.map((study, index) => (
+          {CASE_STUDIES.map((s, i) => (
             <article
-              key={study.id}
-              ref={(node) => {
-                slideRefs.current[index] = node;
-              }}
+              key={s.id}
+              ref={(n) => { slideRefs.current[i] = n; }}
               className="snap-start shrink-0"
-              style={{ width: `min(${study.slideWidth}px, calc(100vw - 40px))` }}
+              style={{ width: `min(515px, calc(100vw - 30px))` }}
             >
               <div className="overflow-hidden rounded-xl">
                 <Image
-                  src={study.image}
-                  alt={study.alt}
-                  width={study.width}
-                  height={study.height}
+                  src={s.image}
+                  alt={s.alt}
+                  width={s.width}
+                  height={s.height}
                   className="h-auto w-full rounded-xl"
-                  sizes={`(max-width: 640px) calc(100vw - 40px), ${study.slideWidth}px`}
+                  sizes="515px"
                   draggable={false}
                 />
               </div>
-
-              <div className="mt-4 min-h-[36px]">
-                {"link" in study && study.link ? (
-                  <CaseStudyLink href={study.link.href} text={study.link.text} />
-                ) : null}
-              </div>
+              {s.link ? (
+                <div className="mt-4">
+                  <Link
+                    href={s.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex flex-row-reverse items-center gap-3 text-[16px] font-medium leading-none text-canvas-white transition-opacity hover:opacity-70"
+                  >
+                    <span>{s.link.text}</span>
+                    <Image
+                      src="https://writer.com/wp-content/uploads/2026/03/Arrow-10.webp"
+                      alt="" width={19} height={19} aria-hidden
+                      className="h-[19px] w-[19px] shrink-0 invert"
+                    />
+                  </Link>
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
 
-        <div className="customers-carousel-nav flex gap-3.5 pl-5 lg:pl-10">
+        <div className="mt-[14px] flex gap-[14px] pl-[15px]">
           {mounted ? (
             <>
               <button
-                type="button"
-                aria-label="Previous slide"
-                disabled={!canScrollPrev}
-                onClick={() => scrollToSlide(Math.max(activeIndex - 1, 0))}
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-midnight-graphite transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
-                suppressHydrationWarning
+                type="button" aria-label="Previous"
+                disabled={!canPrev}
+                onClick={() => scrollTo(Math.max(activeIdx - 1, 0))}
+                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#4F4F4F] text-canvas-white transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
               >
-                <CarouselArrow direction="prev" />
+                <Arrow dir="prev" />
               </button>
               <button
-                type="button"
-                aria-label="Next slide"
-                disabled={!canScrollNext}
-                onClick={() => scrollToSlide(Math.min(activeIndex + 1, CASE_STUDIES.length - 1))}
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-midnight-graphite transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
-                suppressHydrationWarning
+                type="button" aria-label="Next"
+                disabled={!canNext}
+                onClick={() => scrollTo(Math.min(activeIdx + 1, CASE_STUDIES.length - 1))}
+                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#4F4F4F] text-canvas-white transition-opacity disabled:cursor-not-allowed disabled:opacity-35"
               >
-                <CarouselArrow direction="next" />
+                <Arrow dir="next" />
               </button>
             </>
           ) : (
-            <div className="flex gap-3.5" aria-hidden>
-              <span className="h-[38px] w-[38px] rounded-full bg-midnight-graphite opacity-35" />
-              <span className="h-[38px] w-[38px] rounded-full bg-midnight-graphite" />
+            <div className="flex gap-[14px]" aria-hidden>
+              <span className="h-[38px] w-[38px] rounded-full bg-[#4F4F4F] opacity-35" />
+              <span className="h-[38px] w-[38px] rounded-full bg-[#4F4F4F]" />
             </div>
           )}
         </div>

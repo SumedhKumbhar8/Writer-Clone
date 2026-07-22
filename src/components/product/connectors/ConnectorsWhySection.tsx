@@ -3,38 +3,31 @@ import { WHY_CONNECTORS } from "@/data/connectors";
 
 export function ConnectorsWhySection() {
   return (
-    <section className="bg-white pt-[152px]">
-      <div className="mx-auto max-w-[1080px] px-5 lg:px-[15px]">
-        <p className="mb-4 text-[13px] font-medium uppercase tracking-[1px] text-midnight-graphite">
-          WHY CONNECTORS
-        </p>
+    <section className="whyWriter__section">
+      <div className="container-default-sm">
+        <div className="whyWriter_section-title">
+          <p>WHY CONNECTORS</p>
+          <h2 id="h-connect-your-stack-automate-the-work">Connect your stack. Automate the work.</h2>
+        </div>
 
-        <h2 className="text-[clamp(28px,4vw,40px)] font-medium leading-[1.2] tracking-[-0.8px] text-midnight-graphite">
-          Connect your stack. Automate the work.
-        </h2>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="whyWriter__row">
           {WHY_CONNECTORS.map((item) => (
-            <article key={item.title}>
-              <figure className="overflow-hidden rounded-xl bg-[#e4e9ff]">
+            <div key={item.title} className="whyWriter__col">
+              <figure className="wp-block-image size-large">
                 <Image
                   src={item.image}
                   alt=""
                   width={568}
-                  height={320}
-                  className="h-auto w-full object-cover"
-                  aria-hidden
+                  height={312}
                 />
               </figure>
 
-              <h4 className="mt-6 whitespace-pre-line text-[24px] font-medium leading-[1.2] text-midnight-graphite">
+              <h4 id={`h-${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`}>
                 {item.title}
               </h4>
 
-              <p className="mt-3 text-[16px] leading-[1.6] text-[#4f4f4f]">
-                {item.description}
-              </p>
-            </article>
+              <p>{item.description}</p>
+            </div>
           ))}
         </div>
       </div>

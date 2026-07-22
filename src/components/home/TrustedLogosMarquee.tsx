@@ -4,16 +4,16 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export const TRUSTED_LOGOS = [
+  { name: "VOIS", src: "/logos/vois-logo-strip.svg", width: 65 },
   { name: "Vanguard", src: "/logos/vanguard-logo-strip.svg", width: 115 },
   { name: "Salesforce", src: "/logos/salesforce-logo-strip.svg", width: 93 },
-  { name: "KPMG", src: "/logos/kpmg-logo-strip.svg", width: 78 },
+  { name: "KPMG", src: "/logos/kpmg-logo-strip.svg", width: 80 },
   { name: "Qualcomm", src: "/logos/qualcomm-logo-strip.svg", width: 122 },
-  { name: "American Eagle", src: "/logos/american-eagle-logo-strip.svg", width: 111 },
-  { name: "Uber", src: "/logos/uber-logo-strip.svg", width: 59 },
+  { name: "American Eagle", src: "/logos/american-eagle-logo-strip.svg", width: 109 },
+  { name: "Uber", src: "/logos/uber-logo-strip.svg", width: 62 },
   { name: "Dropbox", src: "/logos/dropbox-logo-strip.svg", width: 120 },
-  { name: "e.l.f. Cosmetics", src: "/logos/elf-logo-strip.svg", width: 36 },
+  { name: "e.l.f. Cosmetics", src: "/logos/elf-logo-strip.svg", width: 37 },
   { name: "SCAN Health Plan", src: "/logos/scan-health-logo-strip.svg", width: 78 },
-  { name: "VOIS", src: "/logos/vois-logo-strip.svg", width: 64 },
 ] as const;
 
 const SCROLL_SPEED = 72;

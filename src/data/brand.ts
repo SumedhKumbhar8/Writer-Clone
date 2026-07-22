@@ -13,60 +13,44 @@ export const BRAND_HERO = {
   },
 } as const;
 
-export const BRAND_TRUSTED_LOGOS = {
-  title: "World-class enterprises trust WRITER",
-  logos: [
-    { name: "Vanguard", src: "https://writer.com/wp-content/uploads/2026/06/Group.svg", width: 155 },
-    { name: "Salesforce", src: "https://writer.com/wp-content/uploads/2026/06/Union.svg", width: 126 },
-    { name: "KPMG", src: "https://writer.com/wp-content/uploads/2026/06/KPMG_logo-1.svg", width: 76 },
-    { name: "Qualcomm", src: "https://writer.com/wp-content/uploads/2026/06/Group-4078.svg", width: 130 },
-    { name: "American Eagle", src: "https://writer.com/wp-content/uploads/2026/06/american-Group.svg", width: 149 },
-    { name: "Uber", src: "https://writer.com/wp-content/uploads/2026/06/Uber_logo_2018-1.svg", width: 70 },
-    { name: "Dropbox", src: "https://writer.com/wp-content/uploads/2026/06/Group-3514.svg", width: 120 },
-    { name: "e.l.f. Cosmetics", src: "https://writer.com/wp-content/uploads/2026/06/ELF-1.svg", width: 80 },
-    { name: "SCAN Health Plan", src: "https://writer.com/wp-content/uploads/2026/06/scan-health-logo-strip.svg", width: 160 },
-    { name: "VOIS", src: "https://writer.com/wp-content/uploads/2026/06/Layer_1.svg", width: 80 },
-  ],
-} as const;
-
 export const BRAND_HOW_IT_WORKS = {
   eyebrow: "HOW IT WORKS",
   title: "Brand consistency, built into every output.",
   items: [
     {
       id: "voice",
-      title: "Sounds like your brand,\nnot generic AI.",
+      title: "Sounds like your brand, not generic AI.",
       description:
         "Set a distinct voice for every team and WRITER applies it automatically \u2014 so every output reflects the right tone and personality, whether it comes from marketing, sales, or CS.",
-      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247937.png?w=640",
+      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247937.png",
     },
     {
       id: "words",
-      title: "The right words,\nevery time.",
+      title: "The right words, every time.",
       description:
         "WRITER can enforce approved language, correct capitalization, and rewrite restricted terms \u2014 before any reviewer sees the draft.",
-      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247938.png?w=640",
+      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247938.png",
     },
     {
       id: "rules",
-      title: "Your writing rules,\napplied at creation.",
+      title: "Your writing rules, applied at creation.",
       description:
         "WRITER checks every output against your rules for punctuation, capitalization, grammar, readability, and inclusivity \u2014 before it reaches review.",
-      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247941.png?w=640",
+      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247941.png",
     },
     {
       id: "messaging",
-      title: "What your brand says,\nnot just how it sounds.",
+      title: "What your brand says, not just how it sounds.",
       description:
         "Encode messaging frameworks, positioning, product descriptions, and brand narratives as Skills \u2014 and make them available inside any workflow, for any team.",
-      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247942.png?w=640",
+      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247942.png",
     },
     {
       id: "decks",
-      title: "Branded decks, without\nthe formatting work.",
+      title: "Branded decks, without the formatting work.",
       description:
         "Upload your slide template once and WRITER generates complete presentations from it \u2014 your fonts, colors, and layouts already in place, ready to export and share.",
-      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247944.png?w=640",
+      image: "https://writer.com/wp-content/uploads/2026/05/Frame-2055247944.png",
     },
   ],
 } as const;
@@ -74,7 +58,7 @@ export const BRAND_HOW_IT_WORKS = {
 export const BRAND_WHY_WRITER = {
   icon: "https://writer.com/wp-content/uploads/2026/04/mouse-pointer-click_8bcc37.png?w=32",
   eyebrow: "WHY WRITER",
-  title: "More output.\nFewer brand reviews.",
+  title: "More output.\u2028Fewer brand reviews.",
   items: [
     {
       icon: "https://writer.com/wp-content/uploads/2026/05/lock-keyhole.svg",
@@ -84,13 +68,13 @@ export const BRAND_WHY_WRITER = {
     },
     {
       icon: "https://writer.com/wp-content/uploads/2026/05/eye.svg",
-      title: "Finished assets,\nready to share.",
+      title: "Finished\nassets,\nready to share.",
       description:
         "From presentations to blogs to customer comms WRITER generates complete, on-brand outputs \u2014 so the work that leaves your team already looks the part.",
     },
     {
       icon: "https://writer.com/wp-content/uploads/2026/05/shield-check.svg",
-      title: "Consistent output\nacross every team.",
+      title: "Consistent\noutput across every team.",
       description:
         "Whether it\u2019s marketing, sales, or CS \u2014 every team works from the same approved voices, terms, and writing rules, so brand drift doesn\u2019t compound as output scales.",
     },
@@ -98,7 +82,8 @@ export const BRAND_WHY_WRITER = {
 } as const;
 
 export const BRAND_TESTIMONIAL = {
-  quote: "\u201COne-off prompting just doesn\u2019t work for brand consistency across a growing team. The real game changer was baking our brand DNA right into WRITER\u2014when staying on brand is as simple as clicking a button, you\u2019re not just protecting the brand, you\u2019re speeding up everyone\u2019s day.\u201D",
+  quote:
+    "\u201COne-off prompting just doesn\u2019t work for brand consistency across a growing team. The real game changer was baking our brand DNA right into WRITER\u2014when staying on brand is as simple as clicking a button, you\u2019re not just protecting the brand, you\u2019re speeding up everyone\u2019s day.\u201D",
   author: "Tara Castrejona",
   role: "SVP and Head of Marketing",
   photo: "https://writer.com/wp-content/uploads/2026/05/photo.png",

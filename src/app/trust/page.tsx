@@ -11,7 +11,7 @@ import { TrustBottomCTA } from "@/components/trust/TrustBottomCTA";
 
 export default function TrustPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="trust-page min-h-screen bg-white">
       <TrustHero />
       <TrustLogos />
       <TrustFeatures />

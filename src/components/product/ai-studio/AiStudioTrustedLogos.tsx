@@ -8,13 +8,13 @@ const SCROLL_SPEED = 72;
 
 function LogoStrip({ logo }: { logo: (typeof AI_STUDIO_TRUSTED_LOGOS)[number] }) {
   return (
-    <figure className="trusted-logos-item">
+    <figure className="wp-block-image size-full logo-item-xs m-0">
       <Image
         src={logo.src}
         alt={logo.name}
         width={logo.width}
-        height={60}
-        className="h-[60px] w-auto max-w-none brightness-0 invert"
+        height={77}
+        className="h-[77px] w-auto max-w-none object-contain"
         draggable={false}
       />
     </figure>
@@ -74,22 +74,39 @@ export function AiStudioTrustedLogos() {
   const logos = [...AI_STUDIO_TRUSTED_LOGOS, ...AI_STUDIO_TRUSTED_LOGOS];
 
   return (
-    <section className="ai-studio-logos py-[38px]" aria-label="Customers automating enterprise work">
-      <div className="mx-auto max-w-[1080px] px-5 lg:px-[15px]">
-        <h3 className="mb-[14px] text-center text-[16px] font-normal leading-[1.6] text-canvas-white">
-          Customers are already automating enterprise work with WRITER agentic AI
-        </h3>
+    <section className="logos_array" aria-label="Customers automating enterprise work">
+      <div className="container-default-sm">
+        <div className="text-center wr-mb-3 pb-1">
+          <h3
+            className="mwxs:wr-fz-4 wr-fz-4 wr-font-4 wr-leading-relaxed tw-text-white has-text-color has-link-color"
+            style={{ color: "#d2d4d7" }}
+          >
+            Customers are already automating enterprise work with WRITER agentic AI
+          </h3>
+        </div>
       </div>
 
-      <div className="trusted-logos-marquee">
-        <div
-          ref={trackRef}
-          className={`trusted-logos-track ${ready ? "trusted-logos-track--ready" : ""}`}
-          aria-hidden
-        >
-          {logos.map((logo, i) => (
-            <LogoStrip key={`${logo.name}-${i}`} logo={logo} />
-          ))}
+      <div className="wr-color-logos-1">
+        <div className="container-default-sm logos-gradient-container">
+          <div
+            ref={trackRef}
+            className={`logos-gradient-1 logos-gradient-1_resp logos-gradient-1_flex overflow-hidden ${ready ? "" : ""}`}
+            aria-hidden
+          >
+            <div className="slick-list">
+              <div
+                className="slick-track"
+                style={{
+                  opacity: 1,
+                  transform: ready ? `translate3d(-${offsetRef.current}px, 0, 0)` : "translate3d(0, 0, 0)",
+                }}
+              >
+                {logos.map((logo, i) => (
+                  <LogoStrip key={`${logo.name}-${i}`} logo={logo} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
