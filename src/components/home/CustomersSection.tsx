@@ -96,11 +96,11 @@ export function CustomersSection() {
 
   return (
     <section className="bg-[#1B1B1D] py-[110px]" id="customers">
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
+      <div className="container-default-sm">
         <h5 className="mb-[19px] text-[13px] font-medium uppercase leading-[1.6] tracking-[1px] text-canvas-white">
           CUSTOMERS
         </h5>
-        <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-canvas-white">
+        <h2 className="mb-[25px] text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-canvas-white">
           Measurable outcomes from leading enterprises.
         </h2>
       </div>

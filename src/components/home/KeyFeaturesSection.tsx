@@ -30,36 +30,36 @@ const FEATURE_ROWS = [
 export function KeyFeaturesSection() {
   return (
     <section className="bg-canvas-white pb-[60px]">
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
-        <div className="mx-auto max-w-[760px] text-center">
+      <div className="container-default-sm">
+        <div className="hp-head-section why-writer text-center">
           <h4 className="mb-[10px] text-[16px] font-medium uppercase leading-[1.6] tracking-[1.6px] text-midnight-graphite">
             KEY FEATURES
           </h4>
-          <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
+          <h2 className="mb-4 text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
             Your company&apos;s DNA,
             <br />
             encoded in AI agents.
           </h2>
-          <p className="mx-auto mt-5 max-w-[670px] text-[20px] leading-[1.6] text-slate-gray">
+          <p className="mx-auto mb-0 max-w-[670px] text-[20px] leading-[1.6] text-slate-gray">
             Embed the context, standards, and tools your team runs on, so AI agents have deep domain
             expertise to work like you do.
           </p>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[1080px]">
+        <div className="mx-auto mt-[40px] max-w-[1050px]">
           {FEATURE_ROWS.map((row, ri) => (
             <div
               key={ri}
               className={`grid grid-cols-1 gap-[15px] sm:grid-cols-2${ri === 0 ? " mb-[15px]" : ""}`}
             >
               {row.map((card) => (
-                <figure key={card.src} className="overflow-hidden rounded-xl">
+                <figure key={card.src} className="overflow-hidden rounded-[12px]">
                   <Image
                     src={card.src}
                     alt={card.alt}
                     width={card.width}
                     height={card.height}
-                    className="h-auto w-full"
+                    className="h-auto w-full rounded-[12px]"
                     sizes="(max-width: 640px) 100vw, 540px"
                   />
                 </figure>

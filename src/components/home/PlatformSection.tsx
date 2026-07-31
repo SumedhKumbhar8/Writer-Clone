@@ -34,7 +34,7 @@ const CARDS = [
 export function PlatformSection() {
   return (
     <section className="bg-[#27272B] px-0 pb-[108px] pt-[117px]" style={{ marginTop: "180px" }}>
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
+      <div className="container-default-sm">
         <h4 className="mb-0 text-center text-[13px] font-medium uppercase leading-[1.6] tracking-[1px] text-canvas-white">
           PLATFORM
         </h4>

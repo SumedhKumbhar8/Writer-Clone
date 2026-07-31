@@ -7,7 +7,7 @@ export function RetailTestimonialSection() {
 
   return (
     <section className="bg-[#F5F5F9] py-16 lg:py-20">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mx-auto max-w-[730px] text-center">
           <p className="text-[20px] font-normal leading-[160%] text-[#333]">
             &ldquo;{testimonial.quote}&rdquo;

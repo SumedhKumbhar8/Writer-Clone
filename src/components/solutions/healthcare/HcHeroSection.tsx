@@ -6,8 +6,8 @@ export function HcHeroSection() {
   const { hero } = hcPageData;
 
   return (
-    <section className="bg-[#EDF5F7] pt-[129px] max-lg:pt-[120px] max-lg:pb-[50px] max-lg:pb-0" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+    <section className="bg-[#EDF5F7] pt-[129px] pb-[82px] max-lg:pt-[120px] max-lg:pb-[50px] max-lg:pb-0" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <div className="container-default-sm">
         <div className="flex flex-col items-start gap-[5px] lg:flex-row">
           <div className="finServ_hero_content flex max-w-[460px] flex-col items-start">
             <div className="-mt-[15px] mb-[15px] flex items-center gap-3">

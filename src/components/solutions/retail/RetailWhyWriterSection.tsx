@@ -7,7 +7,7 @@ export function RetailWhyWriterSection() {
 
   return (
     <section className="bg-white py-[79px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mb-12 flex flex-col items-center text-center">
           <Image
             src={whyWriter.writerLogo}

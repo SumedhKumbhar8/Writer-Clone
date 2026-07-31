@@ -27,7 +27,7 @@ export function MktSpotlightsSection() {
 
   return (
     <section className="bg-white py-[43px] pb-[140px] max-lg:pb-[60px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mb-10 max-w-[760px]">
           <h5 className="mb-4 text-[14px] font-semibold uppercase tracking-[4.2px] text-black">
             {spotlights.eyebrow}

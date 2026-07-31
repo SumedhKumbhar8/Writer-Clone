@@ -1,0 +1,387 @@
+/* About page — metrics from writer.com/company/about/ @ 1440 */
+
+.about-page.section-stories-wrap {
+  padding: 115px 0 140px;
+}
+
+.about-page .container.dc-content-2 {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 15px 0;
+  position: relative;
+}
+
+.about-page__logo {
+  display: block;
+  width: 32px;
+  height: 33px;
+  margin: 0 auto 10px;
+}
+
+.about-page__h1 {
+  font-family: CanelaDeck, Georgia, serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 73.5px;
+  color: #000;
+  text-align: center;
+  margin: 0 0 59px;
+}
+
+.about-page .team-grid {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto 100px;
+}
+
+.about-page .team-grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-page .team-card-sm {
+  width: 150px;
+  max-width: 150px;
+  margin: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page .team-card-sm img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.about-page .newsroom-about-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto 100px;
+}
+
+.about-page .newsroom-about-col-content {
+  width: 693px;
+  max-width: 100%;
+}
+
+.about-page .newsroom-about-col-content p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #333;
+  margin: 0 0 35px;
+}
+
+.about-page .newsroom-about-col-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-page .newsroom-about-col-content .about-subhead {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.about-page .newsroom-about-col-items {
+  width: 273px;
+}
+
+.about-page .newsroom-about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.about-page .newsroom-about-item__img {
+  width: 75px;
+  flex-shrink: 0;
+}
+
+.about-page .newsroom-about-item__img img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.about-page .newsroom-about-item__content {
+  width: 198px;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #000;
+  white-space: pre-line;
+}
+
+.about-page .newsroom-about-item__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.about-page .newsroom-about-item__social a {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2f2f2;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.about-page .teams-block {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.about-page .teams-block > h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30.8px;
+  margin: 0 0 25px;
+  color: #000;
+}
+
+.about-page .teams-block__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.about-page .founder-card {
+  width: 262px;
+  padding: 0 8px 16px;
+  text-align: center;
+}
+
+.about-page .founder-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-page .founder-card h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 9px 0;
+  color: #000;
+}
+
+.about-page .founder-card p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.about-page .leader-card {
+  width: 211px;
+  padding: 0 8px 24px;
+  text-align: center;
+}
+
+.about-page .leader-card img {
+  width: 213px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-page .leader-card h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 10px 0 6px;
+  color: #000;
+}
+
+.about-page .leader-card p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  color: #000;
+  white-space: pre-line;
+}
+
+.about-page .commitment-block {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto 70px;
+}
+
+.about-page .commitment-block-inner {
+  max-width: 685px;
+}
+
+.about-page .newsroom-content-item__title {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0 0 25px;
+  color: #000;
+}
+.about-page .values-wrap__title {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30.8px;
+  margin: 0 0 25px;
+  color: #000;
+}
+.about-page .newsroom-about-col-content .newsroom-content-item__title {
+  width: 693px;
+  max-width: 100%;
+}
+
+.about-page .commitment-block p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #333;
+  margin: 0 0 28px;
+}
+
+.about-page .values-block {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about-page .values-block-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.about-page .values-block-col {
+  width: calc((100% - 32px) / 3);
+  min-width: 280px;
+  flex: 1 1 280px;
+}
+
+.about-page .values-block-col img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.about-page .values-block-col h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: #000;
+}
+
+.about-page .values-block-col p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333;
+  margin: 0;
+}
+
+.about-page .hiring-block {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 130px 0 70px;
+  text-align: center;
+}
+
+.about-page .hiring-block .values-wrap__title {
+  margin-bottom: 28px;
+}
+
+.about-page .hiring-block__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 413px;
+  min-height: 80px;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 82px;
+  font-family: Poppins, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-page .learn-more-block {
+  width: 100%;
+  max-width: 1050px;
+  margin: 40px auto 0;
+}
+
+.about-page .learn-more-block__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.about-page .learn-more-card {
+  flex: 1 1 300px;
+  max-width: 340px;
+}
+
+.about-page .learn-more-card h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30.8px;
+  margin: 0 0 12px;
+  color: #000;
+}
+
+.about-page .learn-more-card p {
+  font-family: Graphik, Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.about-page .learn-more-card a {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5551ff;
+  text-decoration: none;
+}

@@ -7,7 +7,7 @@ export function HcTestimonialSection() {
 
   return (
     <section className="bg-white pt-[35px]" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mx-auto max-w-[730px] text-center">
           <p className="text-[20px] font-normal leading-[160%] text-[#333] max-lg:text-[18px]">
             &ldquo;{testimonial.quote}&rdquo;

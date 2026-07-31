@@ -179,6 +179,14 @@
   justify-content: center;
 }
 
+.ROI__hero-section > .container-default-sm,
+.ROI__hero-rail {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .ROI__hero-content {
   display: flex;
   align-items: center;
@@ -188,7 +196,8 @@
   text-align: center;
   max-width: 989px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .ROI__hero-content > * {

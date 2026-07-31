@@ -21,17 +21,17 @@ const FRAMES = [
 export function WhyWriterSection() {
   return (
     <section id="why-writer" className="pb-[60px]">
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
-        <div className="mx-auto mb-10 max-w-[760px] text-center" style={{ marginTop: "30px" }}>
+      <div className="container-default-sm">
+        <div className="hp-head-section mx-auto mb-10 text-center" style={{ marginTop: "30px" }}>
           <h4 className="mb-[10px] text-[16px] font-medium uppercase leading-[1.6] tracking-[1.6px] text-midnight-graphite">
             WHY WRITER
           </h4>
-          <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
+          <h2 className="mb-4 text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
             Same team.
             <br />
             Exponential impact.
           </h2>
-          <p className="mx-auto mt-5 max-w-[670px] text-[20px] leading-[1.6] text-slate-gray">
+          <p className="mx-auto mb-0 max-w-[670px] text-[20px] leading-[1.6] text-slate-gray">
             AI agents handle execution, so your team can focus on the strategic, creative work they do
             best.
           </p>
@@ -45,7 +45,7 @@ export function WhyWriterSection() {
                 alt={f.alt}
                 width={f.width}
                 height={f.height}
-                className="h-auto w-full rounded-xl"
+                className="h-auto w-full"
                 sizes="(max-width: 1050px) 100vw, 1050px"
                 draggable={false}
               />

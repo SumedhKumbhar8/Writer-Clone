@@ -9,9 +9,11 @@ import { KgBenefits } from "@/components/product/knowledge-graph/KgBenefits";
 export default function KnowledgeGraphPage() {
   return (
     <main className="min-h-screen">
-      <section className="section-dark text-center overflow-hidden section-knowledge-graph-main section-pb-sm">
-        <KgHero />
-        <KgHowItWorks />
+      <section className="section-dark text-center overflow-hidden section-knowledge-graph-main section-pb">
+        <div className="container-default-sm pb-3">
+          <KgHero />
+          <KgHowItWorks />
+        </div>
       </section>
       <KgPerformance />
       <KgUseCases />

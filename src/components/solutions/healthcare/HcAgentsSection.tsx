@@ -50,7 +50,7 @@ export function HcAgentsSection() {
 
   return (
     <section className="hsc-ai-agent-wrap mt-[78px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mb-8">
           <h4 className="m-0 text-[18px] font-medium leading-[120%] text-black">
             {agents.eyebrow}
@@ -65,7 +65,7 @@ export function HcAgentsSection() {
       </div>
 
       <div className="bg-[#EDF5F7]">
-        <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+        <div className="container-default-sm">
           <div className="relative overflow-visible rounded-[12px] border border-[#E4E7ED] bg-white pb-[60px]">
             <div className="ai_agents_hc_container px-[30px] pt-[32px] max-lg:px-[25px]">
               <ul className="ai_agents_hc_tab_links mx-auto flex w-fit list-none items-center gap-[12px] rounded-[200px] bg-[#CAE1E7] p-[19px_27px] max-lg:flex-wrap max-lg:justify-start">

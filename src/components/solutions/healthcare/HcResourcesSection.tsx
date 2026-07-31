@@ -7,7 +7,7 @@ export function HcResourcesSection() {
 
   return (
     <section className="bg-white py-[80px] max-lg:py-[50px]" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mx-auto mb-[30px] max-w-[670px] text-center">
           <h5 className="mb-[5px] text-[14px] font-semibold uppercase tracking-[4.2px] text-black">
             {resources.eyebrow}

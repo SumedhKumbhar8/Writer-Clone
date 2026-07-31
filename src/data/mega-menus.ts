@@ -23,10 +23,11 @@ export type MegaMenuColumn = {
 
 export const productMegaMenu = {
   featured: {
-    label: "New Playbook Hub",
+    label: "Updated Playbook Hub",
     title: "The AI playbooks 10x marketers run",
     href: "/marketing-playbooks/",
-    image: "https://writer.com/wp-content/uploads/2026/03/Side-pop_-320x320-AI-ROI-calculator.png",
+    image:
+      "https://writer.com/wp-content/uploads/2026/07/Side-pop_-320x320-AI-ROI-calculator.png",
     cta: "Explore the hub",
     imageWidth: 646,
     imageHeight: 646,
@@ -38,6 +39,13 @@ export const productMegaMenu = {
         label: "WRITER Agent",
         href: "/product/writer-agent/",
         icon: "https://writer.com/wp-content/uploads/2026/04/product.png",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
+      {
+        label: "Playbooks",
+        href: "/marketing-playbooks/",
+        icon: "https://writer.com/wp-content/uploads/2026/07/Group-3703.svg",
         iconWidth: 64,
         iconHeight: 64,
       },
@@ -74,13 +82,13 @@ export const productMegaMenu = {
         iconWidth: 64,
         iconHeight: 64,
       },
-        {
-          label: "Knowledge Graph",
-          href: "/product/knowledge-graph/",
-          icon: "https://writer.com/wp-content/uploads/2026/04/Analyze.png?w=64",
-          iconWidth: 64,
-          iconHeight: 64,
-        },
+      {
+        label: "Knowledge Graph",
+        href: "/product/knowledge-graph/",
+        icon: "https://writer.com/wp-content/uploads/2026/04/Analyze.png?w=64",
+        iconWidth: 64,
+        iconHeight: 64,
+      },
       {
         label: "Trust & security",
         href: "/trust/",
@@ -156,7 +164,8 @@ export const solutionsMegaMenu = {
     label: "New Webinar",
     title: "Build AI workflows that protect your brand",
     href: "https://go.writer.com/forrester-webinar",
-    image: "https://writer.com/wp-content/uploads/2026/06/2026-06-Forrester-HR-Block-top-nav-323x323-1.png",
+    image:
+      "https://writer.com/wp-content/uploads/2026/06/2026-06-Forrester-HR-Block-top-nav-323x323-1.png",
     cta: "Save your spot",
     imageWidth: 646,
     imageHeight: 646,

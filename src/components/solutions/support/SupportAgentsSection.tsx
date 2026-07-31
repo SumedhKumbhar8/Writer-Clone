@@ -48,7 +48,7 @@ export function SupportAgentsSection() {
 
   return (
     <section className="bg-[#1C1B1E] py-[70px] pb-[135px] max-lg:py-[60px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mb-10 max-w-[760px]">
           <Image
             src={agents.icon}

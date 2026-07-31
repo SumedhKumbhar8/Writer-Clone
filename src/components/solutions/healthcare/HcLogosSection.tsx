@@ -6,7 +6,7 @@ export function HcLogosSection() {
 
   return (
     <section className="bg-[#EDF5F7] pb-[42px]" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <p className="mb-[29px] text-center text-[14px] font-medium text-black">
           {logos.label}
         </p>

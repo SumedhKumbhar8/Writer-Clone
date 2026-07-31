@@ -20,7 +20,7 @@ export function HcSpotlightsSection() {
 
   return (
     <section className="py-[93px] max-lg:py-[60px]" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mb-[38px] flex max-w-[660px] flex-col gap-[14px]">
           <h5 className="text-[14px] font-semibold uppercase tracking-[4.2px] text-black">
             {spotlights.eyebrow}

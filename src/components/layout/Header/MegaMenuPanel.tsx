@@ -18,7 +18,7 @@ function MegaMenuArrow() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
-      className="inline-block"
+      className="ml-2 inline-block"
     >
       <path
         fillRule="evenodd"
@@ -32,7 +32,7 @@ function MegaMenuArrow() {
 
 function MegaMenuTitle({ children }: { children: string }) {
   return (
-    <p className="mb-0 pb-[17px] text-[11px] font-semibold uppercase tracking-[3.3px] text-midnight-graphite">
+    <p className="m-0 pb-[17px] text-[11px] font-semibold uppercase tracking-[3.3px] text-black">
       {children}
     </p>
   );
@@ -53,24 +53,26 @@ function MegaMenuLinkItem({
       href={link.href}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
-        "relative flex w-full items-center rounded-[4px] px-[15px] transition-colors duration-200",
-        isProduct ? "py-2 hover:bg-[#f3f5ff] lg:-ml-[15px]" : "gap-3 py-2 hover:bg-[#f3f3f3]",
+        "relative flex w-full items-center rounded-[4px] px-[15px] py-[8px] transition-colors duration-200",
+        isProduct
+          ? "lg:-ml-[15px] hover:bg-[#f3f5ff]"
+          : "gap-[12px] hover:bg-[#f3f3f3]",
       )}
     >
-      <span className="relative top-px flex h-8 w-8 shrink-0 items-center justify-center">
+      <span className="relative top-px flex h-[32px] w-[32px] shrink-0 items-center justify-center">
         <Image
           src={link.icon}
           alt=""
           width={link.iconWidth ?? 32}
           height={link.iconHeight ?? 32}
-          className="h-8 w-8 object-contain"
+          className="h-[32px] w-[32px] object-contain"
           aria-hidden
         />
       </span>
       <span
         className={cn(
-          "text-[14px] font-normal leading-[1.2] text-midnight-graphite",
-          isProduct ? "pl-5" : undefined,
+          "text-[14px] font-normal leading-[1.2] text-black",
+          isProduct ? "pl-[12px]" : undefined,
         )}
       >
         {link.label}
@@ -89,9 +91,9 @@ function MegaMenuColumnBlock({
   return (
     <div>
       <MegaMenuTitle>{column.title}</MegaMenuTitle>
-      <ul className="space-y-0">
+      <ul className="m-0 list-none p-0">
         {column.links.map((link) => (
-          <li key={link.href}>
+          <li key={link.href + link.label}>
             <MegaMenuLinkItem link={link} variant={variant} />
           </li>
         ))}
@@ -107,19 +109,20 @@ function MegaMenuFeaturedCard({
   featured: MegaMenuFeatured;
   divider?: "none" | "before";
 }) {
+  const isExternal = featured.href.startsWith("http");
+
   return (
     <div
       className={cn(
-        "flex h-full flex-col pt-3 pb-3",
-        divider === "before" ? "border-[#eff0f2] lg:border-l lg:pl-5" : "lg:pl-5",
+        "flex h-full flex-col",
+        divider === "before" ? "border-[#eff0f2] lg:border-l lg:pl-5" : undefined,
       )}
     >
       <MegaMenuTitle>{featured.label}</MegaMenuTitle>
       <Link
         href={featured.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group/featured relative mt-2 inline-flex max-w-full items-center lg:mt-[50px]"
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="group/featured relative mt-[10px] inline-flex max-w-full items-center"
       >
         <div className="relative h-[112px] w-[112px] shrink-0">
           <Image
@@ -130,15 +133,13 @@ function MegaMenuFeaturedCard({
             className="h-[112px] w-[112px] object-cover"
           />
         </div>
-        <div className="min-w-0 flex-1 pl-5">
-          <p className="font-display text-[18px] font-normal leading-[1.33] text-midnight-graphite">
+        <div className="min-w-0 flex-1 pl-5 pr-5">
+          <p className="m-0 font-[Poppins,sans-serif] text-[18px] font-normal leading-6 text-black">
             {featured.title}
           </p>
-          <span className="mt-5 inline-flex items-center text-[12px] font-semibold leading-normal text-midnight-graphite group-hover/featured:underline">
+          <span className="mt-[12px] inline-flex items-center text-[12px] font-semibold leading-[18px] text-black group-hover/featured:underline">
             {featured.cta}
-            <span className="ml-2">
-              <MegaMenuArrow />
-            </span>
+            <MegaMenuArrow />
           </span>
         </div>
       </Link>
@@ -150,14 +151,21 @@ function ProductMegaMenu() {
   const { featured, product, platform } = productMegaMenu;
 
   return (
-    <div className="mx-auto grid max-w-[1136px] grid-cols-1 px-5 lg:grid-cols-[minmax(0,4fr)_minmax(0,6fr)] lg:gap-0 lg:px-10">
-      <MegaMenuFeaturedCard featured={featured} />
-      <div className="grid grid-cols-1 border-[#eff0f2] pt-3 pb-3 md:grid-cols-2 md:gap-3 lg:-mx-1.5 lg:gap-0 lg:border-l lg:pl-5">
-        <div className="lg:px-1.5">
-          <MegaMenuColumnBlock column={product} variant="product" />
+    <div className="container-menu-lg mx-auto w-full max-w-[1136px] px-[15px]">
+      <div className="flex flex-col lg:flex-row-reverse lg:justify-center">
+        <div className="w-full py-[20px] lg:w-1/2 lg:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="min-w-0 md:max-w-[290px]">
+              <MegaMenuColumnBlock column={product} variant="product" />
+            </div>
+            <div className="min-w-0 md:max-w-[290px]">
+              <MegaMenuColumnBlock column={platform} variant="product" />
+            </div>
+          </div>
         </div>
-        <div className="lg:px-1.5">
-          <MegaMenuColumnBlock column={platform} variant="product" />
+
+        <div className="w-full px-0 py-[20px] lg:w-1/3 lg:max-w-[379px] lg:px-[15px]">
+          <MegaMenuFeaturedCard featured={featured} />
         </div>
       </div>
     </div>
@@ -168,7 +176,7 @@ function SolutionsMegaMenu() {
   const { industries, departments, featured } = solutionsMegaMenu;
 
   return (
-    <div className="mx-auto grid max-w-[1136px] grid-cols-1 gap-8 px-5 py-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-10 lg:px-10 lg:py-3">
+    <div className="mx-auto grid max-w-[1136px] grid-cols-1 gap-[32px] px-[15px] py-[20px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-[40px]">
       <MegaMenuColumnBlock column={industries} />
       <MegaMenuColumnBlock column={departments} />
       <MegaMenuFeaturedCard featured={featured} divider="before" />
@@ -180,9 +188,11 @@ function ResourcesMegaMenu() {
   const { featured, resourcesPrimary, resourcesSecondary } = resourcesMegaMenu;
 
   return (
-    <div className="mx-auto grid max-w-[1136px] grid-cols-1 px-5 lg:grid-cols-[minmax(0,4fr)_minmax(0,6fr)] lg:gap-0 lg:px-10">
-      <MegaMenuFeaturedCard featured={featured} />
-      <div className="grid grid-cols-1 gap-8 border-[#eff0f2] pt-3 pb-3 md:grid-cols-2 lg:border-l lg:pl-5">
+    <div className="mx-auto grid max-w-[1136px] grid-cols-1 px-[15px] lg:grid-cols-[minmax(0,4fr)_minmax(0,6fr)] lg:gap-0">
+      <div className="py-[20px] lg:px-[15px]">
+        <MegaMenuFeaturedCard featured={featured} />
+      </div>
+      <div className="grid grid-cols-1 gap-[32px] border-[#eff0f2] py-[20px] md:grid-cols-2 lg:border-l lg:pl-[20px]">
         <MegaMenuColumnBlock column={resourcesPrimary} />
         <MegaMenuColumnBlock column={resourcesSecondary} />
       </div>
@@ -196,7 +206,7 @@ type MegaMenuPanelProps = {
 
 export function MegaMenuPanel({ menuId }: MegaMenuPanelProps) {
   return (
-    <div className="header-mega-menu border-t border-[#f3f3f3] bg-canvas-white shadow-[0_4px_4px_rgba(243,243,243,1)]">
+    <div className="header-mega-menu border-t-[0.8px] border-[#eff0f2] bg-white shadow-[0_2px_4px_rgb(243,243,243)]">
       {menuId === "product" ? <ProductMegaMenu /> : null}
       {menuId === "solutions" ? <SolutionsMegaMenu /> : null}
       {menuId === "resources" ? <ResourcesMegaMenu /> : null}

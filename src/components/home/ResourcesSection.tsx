@@ -37,12 +37,14 @@ const RESOURCES = [
 export function ResourcesSection() {
   return (
     <section className="bg-[#1A1A1C] py-[112px]" id="resources">
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
+      <div className="container-default-sm">
         <h4 className="mb-0 text-center text-[13px] font-medium uppercase leading-[1.6] tracking-[1px] text-canvas-white">
           RESOURCES
         </h4>
         <h2 className="mb-10 text-center text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-canvas-white">
-          Everything your marketing team needs to go AI-native
+          Everything your marketing team
+          <br />
+          needs to go AI-native
         </h2>
 
         <div className="grid gap-[25px] lg:grid-cols-2">

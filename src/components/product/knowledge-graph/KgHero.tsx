@@ -2,10 +2,13 @@ import Link from "next/link";
 
 export function KgHero() {
   return (
-    <div className="container-default-sm">
+    <>
+      <div className="dc-content mb-2">
+        <div className="head">KNOWLEDGE GRAPH</div>
+      </div>
+
       <div className="section-knowledge-graph-main__content">
         <div className="col-12 px-0 col-xl-9 mx-auto">
-          <p className="head mb-1">KNOWLEDGE GRAPH</p>
           <h1
             className="wp-block-heading"
             id="h-an-innovative-approach-to-knowledge-retrieval"
@@ -35,6 +38,6 @@ export function KgHero() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

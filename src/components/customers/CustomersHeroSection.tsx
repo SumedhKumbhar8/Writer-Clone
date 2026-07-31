@@ -67,7 +67,7 @@ export function CustomersHeroSection({
       <div className="mx-auto max-w-[1080px] px-[15px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
           <div className="flex w-full flex-col lg:max-w-[563px] lg:flex-1">
-            <p className="mb-8 text-sm font-medium uppercase tracking-widest text-midnight-graphite lg:mb-10">
+            <p className="mb-[43px] text-[14px] font-medium uppercase tracking-[3px] text-midnight-graphite">
               CUSTOMERS
             </p>
             <h1 className="customers-page-hero__title">

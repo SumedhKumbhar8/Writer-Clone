@@ -115,14 +115,17 @@ export function BlogFeaturedPost({ post }: { post: BlogPost }) {
           className="aspect-[780/439] w-full object-cover"
         />
       </Link>
-      <div className="mb-[25px] mt-[35px]">
+      <div className="mb-[21px] mt-[42px]">
         <CategoryMeta
           category={post.category}
           categoryHref={post.categoryHref}
           readTime={post.readTime}
         />
       </div>
-      <h2 className="m-0 max-w-[780px] pr-[30px] text-[41px] font-medium leading-[45px] text-black">
+      <h2
+        className="m-0 max-w-[780px] pr-[30px] text-[41px] font-medium leading-[45px] text-black"
+        style={{ fontFamily: "var(--font-graphik)" }}
+      >
         <Link href={post.href} className="text-inherit">
           {post.title}
         </Link>

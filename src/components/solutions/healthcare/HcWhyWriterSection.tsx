@@ -7,7 +7,7 @@ export function HcWhyWriterSection() {
 
   return (
     <section className="bg-white py-[90px] max-lg:py-[60px]" style={{ fontFamily: "Poppins, sans-serif" }}>
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mx-auto mb-[30px] flex max-w-[800px] flex-col items-center gap-[18px] text-center">
           <Image
             src={whyWriter.writerLogo}

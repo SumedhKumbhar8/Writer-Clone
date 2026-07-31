@@ -7,7 +7,7 @@ export function SupportQuoteSection() {
 
   return (
     <section className="bg-white py-[60px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="flex flex-col items-center text-center">
           <blockquote className="max-w-[700px] text-[clamp(20px,2.5vw,25px)] font-normal leading-[1.52] text-black font-serif">
             {quote.text}

@@ -7,7 +7,7 @@ export function SalesResourcesSection() {
 
   return (
     <section className="bg-white py-[50px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+      <div className="container-default-sm">
         <div className="mx-auto mb-10 max-w-[760px] text-center">
           <h5 className="mb-4 text-[14px] font-semibold uppercase tracking-[4.2px] text-black">
             {resources.eyebrow}

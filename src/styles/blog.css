@@ -1,0 +1,40 @@
+/* Blog listing — metrics from writer.com/blog/ @ 1440 */
+.main-screen-blog {
+  padding: 110px 0 0;
+  position: relative;
+}
+
+.dc-container-xl {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 70px 100px;
+  position: relative;
+}
+
+.row-blog-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.col-blog-main-l {
+  width: 780px;
+  max-width: 100%;
+}
+
+.col-blog-main-r {
+  width: 500px;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+.col-blog-main-r .dc-b-m-logo {
+  margin-top: -1px;
+  min-height: 217px;
+}
+.col-blog-main-r__title {
+  border-bottom: 1px solid #e4e7ed;
+}

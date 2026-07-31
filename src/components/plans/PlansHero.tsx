@@ -1,8 +1,3 @@
-import { Container } from "@/components/shared/Container";
-import { GradientOrb } from "@/components/shared/GradientOrb";
-import { Reveal } from "@/components/shared/Reveal";
-import { Section } from "@/components/shared/Section";
-
 type PlansHeroProps = {
   title: string;
   description: string;
@@ -10,20 +5,13 @@ type PlansHeroProps = {
 
 export function PlansHero({ title, description }: PlansHeroProps) {
   return (
-    <Section variant="gradient" className="section-hero">
-      <GradientOrb className="-top-20 right-0" size="lg" />
-      <Container>
-        <Reveal>
-          <div className="flex flex-col items-center gap-6 pt-20 text-center sm:pt-28">
-            <p className="text-caption inline-flex items-center gap-2 text-action-blue">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-action-blue" />
-              {title.split(" ")[0]}
-            </p>
-            <h1 className="text-display">{title}</h1>
-            <p className="text-subheading max-w-2xl text-slate-gray">{description}</p>
-          </div>
-        </Reveal>
-      </Container>
-    </Section>
+    <div className="pricing_page_title mx-auto w-full max-w-[945px] text-center">
+      <h1 className="m-0 mb-5 text-[64px] font-normal leading-none text-midnight-graphite">
+        {title}
+      </h1>
+      <p className="my-4 text-[16px] font-normal leading-normal text-midnight-graphite">
+        {description}
+      </p>
+    </div>
   );
 }

@@ -3,36 +3,46 @@ import Link from "next/link";
 
 export function AgentSection() {
   return (
-    <section className="bg-canvas-white py-[21px] pb-[30px]" id="product">
-      <div className="mx-auto w-full max-w-[1080px] px-[15px]">
-        <div className="mx-auto max-w-[760px] text-center">
-          <h4 className="mb-[10px] text-[16px] font-medium uppercase leading-[1.6] tracking-[1.6px] text-midnight-graphite">
-            WRITER AGENT
-          </h4>
-          <h2 className="text-[40px] font-medium leading-[48px] tracking-[-0.8px] text-midnight-graphite">
+    <section className="hp-writer-head-wrap hp__agent-section" id="product">
+      <div className="container-default-sm">
+        <div className="hp-head-section">
+          <div className="flex justify-center">
+            <Image
+              src="https://writer.com/wp-content/uploads/2026/03/Vector.webp"
+              alt=""
+              width={16}
+              height={16}
+              className="h-[16px] w-[16px]"
+              aria-hidden
+            />
+          </div>
+          <h4>WRITER AGENT</h4>
+          <h2>
             Not a tool you prompt.
             <br />
             An agent you delegate to.
           </h2>
-          <p className="mx-auto mt-5 max-w-[560px] text-[16px] leading-[1.6] text-slate-gray">
+          <p>
             Describe what you need and WRITER executes from start to finish, delivering polished,
             on-brand work in minutes.
           </p>
-          <Link
-            href="/product/writer-agent/"
-            className="mt-6 inline-flex text-[16px] font-medium text-midnight-graphite underline-offset-4 hover:underline"
-          >
-            → Explore WRITER Agent
-          </Link>
+          <div className="wp-block-buttons">
+            <div className="wp-block-button">
+              <Link href="/product/writer-agent/" className="wp-block-button__link">
+                →&nbsp; Explore WRITER Agent
+              </Link>
+            </div>
+          </div>
         </div>
 
-        <div className="relative mx-auto mt-14 aspect-[16/10] max-w-[1100px] overflow-hidden rounded-xl bg-lavender-mist">
+        <div className="writer-agent-slider relative w-full overflow-hidden">
           <Image
             src="https://writer.com/wp-content/uploads/2026/04/WPI2026-%E2%80%93-8.png"
             alt="WRITER Agent interface"
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 1100px) 100vw, 1100px"
+            width={1024}
+            height={481}
+            className="h-[481px] w-[1024px] max-w-full object-cover object-top"
+            sizes="1024px"
           />
         </div>
       </div>

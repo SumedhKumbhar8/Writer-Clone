@@ -6,8 +6,8 @@ export function TechHeroSection() {
   const { hero } = techPageData;
 
   return (
-    <section className="bg-[#E5EDF4] pt-[129px] max-lg:pt-[120px] max-lg:pb-[50px]">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+    <section className="bg-[#E5EDF4] pt-[129px] pb-[82px] max-lg:pt-[120px] max-lg:pb-[50px]">
+      <div className="container-default-sm">
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-[440px]">
             <div className="-mt-[15px] mb-[15px] flex items-center gap-3">

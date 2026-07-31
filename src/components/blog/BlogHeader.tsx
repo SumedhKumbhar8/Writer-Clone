@@ -10,8 +10,8 @@ export function BlogHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-[120] w-full bg-white px-0 pb-[34px] pt-[27px]">
-      <div className="relative flex items-center px-10">
+    <header className="header-blog absolute left-0 right-0 top-0 z-[120] w-full bg-white px-0 pb-[34px] pt-[27px]">
+      <div className="relative flex items-center px-[40px]">
         <Link href="/" className="relative z-[2] shrink-0" aria-label="WRITER home">
           <Image
             src={blogData.logos.circle}
@@ -39,7 +39,7 @@ export function BlogHeader() {
         </Link>
 
         <nav
-          className="absolute left-[300px] top-1/2 z-[1] hidden -translate-y-1/2 lg:block"
+          className="absolute left-[293px] top-1/2 z-[1] hidden -translate-y-1/2 lg:block"
           aria-label="Blog categories"
         >
           <ul className="flex items-center gap-8">

@@ -1,22 +1,25 @@
-import { HeroSection } from "@/components/sections/hero";
-import { LegalContentSection } from "@/components/sections/legal";
+import { LegalShell } from "@/components/legal/LegalShell";
 import { legalData } from "@/data/legal";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: legalData.security.title,
-  description: "Writer security practices.",
+  title: "Security | Legal hub",
+  description: "Writer security information.",
   path: "/legal/security",
 });
 
 export default function SecurityPage() {
+  const { security } = legalData;
+
   return (
-    <>
-      <HeroSection
-        title={legalData.security.title}
-        description={`Last updated ${legalData.security.lastUpdated}`}
-      />
-      <LegalContentSection {...legalData.security} />
-    </>
+    <LegalShell title="Security" activeHref="/legal/security">
+      <p>Last updated {security.lastUpdated}</p>
+      {security.sections.map((section) => (
+        <section key={section.heading}>
+          <h2>{section.heading}</h2>
+          <p>{section.content}</p>
+        </section>
+      ))}
+    </LegalShell>
   );
 }

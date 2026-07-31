@@ -33,9 +33,9 @@ const HOW_IT_WORKS_DATA = [
 
 export function KgHowItWorks() {
   return (
-    <div className="container-default-sm">
-      <div className="text-center" style={{ margin: "80px 0 48px" }}>
-        <p className="head mb-1">HOW IT WORKS</p>
+    <>
+      <div className="dc-content text-center mt-5 mt-md-7 knowledge-hiw-head">
+        <div className="head">HOW IT WORKS</div>
       </div>
 
       <div className="knowledge-hiw-row-wrap">
@@ -78,8 +78,8 @@ export function KgHowItWorks() {
         ))}
       </div>
 
-      <div className="text-center" style={{ marginTop: 48, paddingBottom: 40 }}>
-        <p style={{ color: "#e4e7ed", fontSize: 18, marginBottom: 24 }}>
+      <div className="text-center knowledge-hiw-footer">
+        <p>
           Want to learn more about the limitations of RAG approaches that uses
           vector retrieval?
         </p>
@@ -90,6 +90,6 @@ export function KgHowItWorks() {
           Read the blog post
         </Link>
       </div>
-    </div>
+    </>
   );
 }

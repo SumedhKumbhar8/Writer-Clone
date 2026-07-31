@@ -6,8 +6,8 @@ export function FsHeroSection() {
   const { hero } = fsPageData;
 
   return (
-    <section className="bg-[#BFDAD0] pt-[129px] max-lg:pt-[120px] max-lg:pb-[50px] max-lg:pb-0">
-      <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+    <section className="bg-[#BFDAD0] pt-[129px] pb-[82px] max-lg:pt-[120px] max-lg:pb-[50px] max-lg:pb-0">
+      <div className="container-default-sm">
         <div className="finServ_hero_row flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="finServ_hero_content max-w-[460px]">
             <div className="-mt-[15px] mb-[15px] flex items-center gap-3">

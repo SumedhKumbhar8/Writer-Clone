@@ -23,7 +23,7 @@ export const navigationData = {
     href: "https://app.writer.com/register",
   },
   signIn: {
-    label: "Sign in",
+    label: "Log in",
     href: "https://app.writer.com/login",
   },
   cta: {

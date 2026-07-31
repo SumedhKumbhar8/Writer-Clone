@@ -4,6 +4,7 @@ import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogNewsletter } from "@/components/blog/BlogNewsletter";
 import { blogData } from "@/data/blog";
 import { createPageMetadata } from "@/lib/seo";
+import "@/styles/blog.css";
 
 export const metadata = createPageMetadata({
   title: "WRITER's Room",
@@ -16,12 +17,12 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white text-black">
       <BlogHeader />
-      <div className="pb-8 pt-2">
+      <div className="main-screen-blog dc-blog-style">
         <BlogHero />
-        {blogData.categories.map((category) => (
-          <BlogCategorySection key={category.name} category={category} />
-        ))}
       </div>
+      {blogData.categories.map((category) => (
+        <BlogCategorySection key={category.name} category={category} />
+      ))}
       <BlogNewsletter />
     </div>
   );

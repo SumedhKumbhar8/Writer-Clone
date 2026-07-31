@@ -20,12 +20,14 @@ export default function AiRoiCalculatorPage() {
     <div className="roi-page">
       <RoiHeader />
       <section className="ROI__hero-section">
-        <div className="ROI__hero-content">
-          <h1>Marketing AI ROI calculator</h1>
-          <p>
-            Get an instant, personalized ROI calculation and see how WRITER
-            transforms marketing workflows with agentic AI.
-          </p>
+        <div className="ROI__hero-rail">
+          <div className="ROI__hero-content">
+            <h1>Marketing AI ROI calculator</h1>
+            <p>
+              Get an instant, personalized ROI calculation and see how WRITER
+              transforms marketing workflows with agentic AI.
+            </p>
+          </div>
         </div>
       </section>
 
